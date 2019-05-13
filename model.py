@@ -100,19 +100,29 @@ class Results(db.Model):
 
 	__tablename__ = "results"
 
-fastest_lap_time = db.Column(db.DateTime, nullable=False)
-gap
-grid
-laps
-podiums
-points
-position
-vehicle number
-status
-victories
-victory_pole_fastest_lap
+	fastest_lap_time = db.Column(db.DateTime, nullable=False)
+	gap = db.Column(db.DateTime, nullable=False, default=00:00:00:000)
+	grid = db.Column(db.Integer, nullable=False) #how to add P in front of position integer on grid
+	laps = db.Column(db.Integer, nullable=False)
+	podiums = db.Column(db.Integer, nullable=False)
+	points = db.Column(db.Integer, nullable=False)
+	position = db.Column(db.Integer, nullable=False)
+	vehicle_number = db.Column(db.Integer, nullable=False)
+	status = db.Column(db.Boolen, nullable=False)
+	victories = db.Column(db.Integer, nullable=False)
+	victory_pole_fastest_lap = db.Column(db.Integer, nullable=False)
 
-venue = db.relationship('Venue')
+	#create a variable that is based on the value that exists in the venue
+	venue = db.relationship('Venue.venue_id')
+	competitor = db.relationship('Competitor', backref='result')
+
+	def __repr__(self):
+		"""Define and display all the values of the result."""
+
+		return"<Result fastest_lap_time={} gap={} grid={} laps={} podiums={} points={} position={} vehicle_chassis={} status={} victories={} victory_pole_fastest_lap={}".format(
+			self.fastest_lap_time, self.gap, self.grid, self.laps, self.podiums, self.points, self.position, self.vehicle_chassis, self.status, self.victories, self.victory_pole_fastest_lap)
+
+
 
 
 class Venue(db.Model):
