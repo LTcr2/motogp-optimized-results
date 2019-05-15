@@ -28,16 +28,16 @@ class Competitor(db.Model):
 
 	#cannot delete from competitor table if competitor has team
 
-	competitor_id = db.Column(db.Interger, db.ForeignKey('team.team_id'), nullable=False)
+	competitor_id = db.Column(db.Integer, db.ForeignKey('team.team_id'), nullable=False)
 	
 
-	name = db.Column(db.String(50), nullable=False)
+	name = db.Column(db.String(50), primary_key=True,nullable=False)
 	country_code = db.Column(db.String(3), nullable=False)
 	nationality = db.Column(db.String(3), nullable=False)
 	official_website = db.Column(db.String(100), nullable=True)
 	debut = db.Column(db.Date, nullable=False)
 	gender = db.Column(db.String(10), nullable=False)
-	vehicle_number = db.Column(db.Interger, nullable=False)
+	vehicle_number = db.Column(db.Integer, nullable=False)
 
 	"""
 	- connect to results and Team
@@ -75,7 +75,7 @@ class Team(db.Model):
 
 	__tablename__ = "teams"
 
-	team_id = db.Column(db.Interger, primary_key=True)
+	team_id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(100), nullable=False)
 	foundation_year = db.Column(db.Date, nullable=False)
 	location = db.Column(db.String(70), nullable=False)
@@ -95,20 +95,20 @@ class Team(db.Model):
 
 
 
-class Results(db.Model):
+class Result(db.Model):
 	"""Results is the middle table that connects riders with results table and venue"""
 
 	__tablename__ = "results"
 
-	fastest_lap_time = db.Column(db.DateTime, nullable=False)
-	gap = db.Column(db.DateTime, nullable=False, default=00:00:00:000)
+	fastest_lap_time = db.Column(db.DateTime, primary_key=True, nullable=False)
+	gap = db.Column(db.DateTime, nullable=False)
 	grid = db.Column(db.Integer, nullable=False) #how to add P in front of position integer on grid
 	laps = db.Column(db.Integer, nullable=False)
 	podiums = db.Column(db.Integer, nullable=False)
 	points = db.Column(db.Integer, nullable=False)
 	position = db.Column(db.Integer, nullable=False)
 	vehicle_number = db.Column(db.Integer, nullable=False)
-	status = db.Column(db.Boolen, nullable=False)
+	status = db.Column(db.Boolean, nullable=False)
 	victories = db.Column(db.Integer, nullable=False)
 	victory_pole_fastest_lap = db.Column(db.Integer, nullable=False)
 
@@ -130,24 +130,35 @@ class Venue(db.Model):
 
 	__tablename__ = "venues"
 
-	venue_id = db.Column(db.Integer, primarykey=True, nullable=False)
+	venue_id = db.Column(db.Integer, primary_key=True, nullable=False)
 	city = db.Column(db.String(50), nullable=False)
 	name = db.Column(db.String(50), nullable=True)
-	country = db.Column(db.String(50), nullable=False)
+	# country = db.Column(db.String(50), nullable=False)
 	country_code = db.Column(db.String(3), nullable=False)
-	curves_left = db.Column(db.Integer, nullable=False)
-	curves_right = db.Column(db.Integer, nullable=False)
-	turns = db.Column(db.Integer(curves_left + curves_right))
+	lefts = db.Column(db.Integer, nullable=False)
+	rights = db.Column(db.Integer, nullable=False)
+	# turns = db.Column(db.Integer(curves_left + curves_right))
 
 
 	def __repr__(self):
 		"""Define and display Venue class information"""
 
-		return "<Venue id={} city={} country={} country code={} lefts={} rights={} turns={}".format(
-			self.venue_id, self.city, self.country, self.country_code, self.curves_left, self.curves_right, self.turns)
+		return f"<Venue id={self.venue_id} city={self.city} name={self.name} country={self.country_code} lefts={self.lefts} rights={self.rights}>"
 
 
 
+class Season(db.Model):
+	"""Season information, connects competitor to team, vehicle id to competitor(that season), competitor_id to team_id, and how many seasons a team has competed in"""
+
+
+	__tablename__ = "seasons"
+
+	year =
+	season_id =
+	vehicle_id = 
+	competitor_id = 
+	team_id = 
+	team.seasons = 
 
 
 
