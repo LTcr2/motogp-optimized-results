@@ -74,23 +74,6 @@ def show_comp_profile():
 
 
 
-def convertjson_riders():
-	"""trying to convert a some json into a python dictionary"""
-
-	json_open = open("seed_data/riders.json").read()
-
-	converted_info = json.loads(json_open)
-	# this works! 
-	# now now i need to put this parse this data
-	
-	return converted_info
-
-
-
-
-
-
-
 
 
 

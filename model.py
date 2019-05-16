@@ -23,8 +23,8 @@ class Competitor(db.Model):
 
 	__tablename__ = "competitors"
 
-	competitor_id = db.Column(db.Integer, nullable=False)
-	name = db.Column(db.String(50), primary_key=True,nullable=False)
+	competitor_id = db.Column(db.Integer, primary_key=True, nullable=False)
+	name = db.Column(db.String(50),nullable=False)
 	country_code = db.Column(db.String(3), nullable=False)
 	# nationality = db.Column(db.String(3), nullable=False)
 	# official_website = db.Column(db.String(100), nullable=True)
