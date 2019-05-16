@@ -16,27 +16,20 @@ db = SQLAlchemy()
 ####################################################
 # Model definitions
 
+# WE DON'T NEED A SEASON because our data is only 2018
+
 class Competitor(db.Model):
 	"""Competitor"""
 
 	__tablename__ = "competitors"
 
-
-	#one competitor can only have one team, team can have multiple riders
-
-	#referential integrity prevents competitor_id in team table but not in competitor table
-
-	#cannot delete from competitor table if competitor has team
-
-	competitor_id = db.Column(db.Integer, db.ForeignKey('team.team_id'), nullable=False)
-	
-
+	competitor_id = db.Column(db.Integer, nullable=False)
 	name = db.Column(db.String(50), primary_key=True,nullable=False)
 	country_code = db.Column(db.String(3), nullable=False)
-	nationality = db.Column(db.String(3), nullable=False)
-	official_website = db.Column(db.String(100), nullable=True)
-	debut = db.Column(db.Date, nullable=False)
-	gender = db.Column(db.String(10), nullable=False)
+	# nationality = db.Column(db.String(3), nullable=False)
+	# official_website = db.Column(db.String(100), nullable=True)
+	# debut = db.Column(db.Date, nullable=False)
+	# gender = db.Column(db.String(10), nullable=False)
 	vehicle_number = db.Column(db.Integer, nullable=False)
 
 	"""
@@ -77,11 +70,12 @@ class Team(db.Model):
 
 	team_id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(100), nullable=False)
-	foundation_year = db.Column(db.Date, nullable=False)
-	location = db.Column(db.String(70), nullable=False)
-	official_website = db.Column(db.String(100), nullable=True)
 	vehicle_chassis = db.Column(db.String(50), nullable=False)
-	country_code = db.Column(db.String(3), nullable=False)
+
+	# foundation_year = db.Column(db.Date, nullable=False)
+	# location = db.Column(db.String(70), nullable=False)
+	# official_website = db.Column(db.String(100), nullable=True)
+	# country_code = db.Column(db.String(3), nullable=False)
 
 	competitor = db.relationship('Competitor')
 
@@ -100,21 +94,22 @@ class Result(db.Model):
 
 	__tablename__ = "results"
 
-	fastest_lap_time = db.Column(db.DateTime, primary_key=True, nullable=False)
-	gap = db.Column(db.DateTime, nullable=False)
-	grid = db.Column(db.Integer, nullable=False) #how to add P in front of position integer on grid
-	laps = db.Column(db.Integer, nullable=False)
-	podiums = db.Column(db.Integer, nullable=False)
-	points = db.Column(db.Integer, nullable=False)
+	fastest_lap_time = db.Column(db.String, primary_key=True, nullable=False)
+	gap = db.Column(db.String, nullable=False)
+	# grid = db.Column(db.Integer, nullable=False) #how to add P in front of position integer on grid
+	# laps = db.Column(db.Integer, nullable=True)
+	# podiums = db.Column(db.Integer, nullable=True)
+	# points = db.Column(db.Integer, nullable=True)
+	# pole_positions = db.Column(db. Integer, nullable=True)
 	position = db.Column(db.Integer, nullable=False)
 	vehicle_number = db.Column(db.Integer, nullable=False)
-	status = db.Column(db.Boolean, nullable=False)
-	victories = db.Column(db.Integer, nullable=False)
-	victory_pole_fastest_lap = db.Column(db.Integer, nullable=False)
+	# status = db.Column(db.String, nullable=False)
+	# victories = db.Column(db.Integer, nullable=False)
+	# victory_pole_fastest_lap = db.Column(db.Integer, nullable=False)
 
 	#create a variable that is based on the value that exists in the venue
 	venue = db.relationship('Venue.venue_id')
-	competitor = db.relationship('Competitor', backref='result')
+	competitor_id = db.relationship('Competitor', backref='result')
 
 	def __repr__(self):
 		"""Define and display all the values of the result."""
@@ -137,6 +132,8 @@ class Venue(db.Model):
 	country_code = db.Column(db.String(3), nullable=False)
 	lefts = db.Column(db.Integer, nullable=False)
 	rights = db.Column(db.Integer, nullable=False)
+	length = db.Column(db.Integer, nullable=False)
+	debut = db.Column(db.Integer, nullable=False)
 	# turns = db.Column(db.Integer(curves_left + curves_right))
 
 
@@ -144,24 +141,6 @@ class Venue(db.Model):
 		"""Define and display Venue class information"""
 
 		return f"<Venue id={self.venue_id} city={self.city} name={self.name} country={self.country_code} lefts={self.lefts} rights={self.rights}>"
-
-
-
-class Season(db.Model):
-	"""Season information, connects competitor to team, vehicle id to competitor(that season), competitor_id to team_id, and how many seasons a team has competed in"""
-
-
-	__tablename__ = "seasons"
-
-	year =
-	season_id =
-	vehicle_id = 
-	competitor_id = 
-	team_id = 
-	team.seasons = 
-
-
-
 
 
 
@@ -197,7 +176,6 @@ if __name__ == "__main__":
 	print("Connected to theeee DB.")
 
 	db.create_all()
-	example_data()
 
 
 
