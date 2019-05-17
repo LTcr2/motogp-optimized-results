@@ -5,6 +5,8 @@ from flask import Flask, jsonify, request
 import requests
 from flask import Flask, render_template, flash, redirect
 import json
+# from flask_debugtoolbar import DebugToolbarExtension
+from jinja2 import StrictUndefined
 
 
 #using api lab "balloonicorn's party" from hackbright as example
@@ -12,7 +14,11 @@ import json
 
 #MY UNIQUE QUERY PARAMETERS
 app = Flask(__name__)
+
+
 app.secret_key = "NOTSUREYETBUTOKAY"
+
+app.jinja_env.undefined = StrictUndefined
 
 
 sportradar_url = "http://api.sportradar.us/motogp/trial/v2/en/"
@@ -84,8 +90,15 @@ def show_comp_profile():
 
 
 
-# if __name__ == "__main__":
-#     app.run(host="0.0.0.0")
+if __name__ == "__main__":
+
+	# app.debug = True
+
+	connect_to_db(app)
+
+	# DebugToolbarExtension(app)
+
+app.run(host="0.0.0.0")
 
 
 

@@ -39,8 +39,8 @@ class Competitor(db.Model):
 	- returns objects or list of objects
 	"""
 
-	result = db.relationship('Results')
-	team = db.relationship('Team'), db.ForeignKey('team.id')
+	# result = db.relationship('Result'), db.ForeignKey('competitor_id')
+	# team = db.relationship('Team'), db.ForeignKey('team.id')
 
 	"""
 	alternative relationship syntax: backref
@@ -58,8 +58,8 @@ class Competitor(db.Model):
 	def __repr__(self):
 		""" Returns representation of class information"""
 
-		return "<Competitor id={} name={} nationality={} debut={} gender={} team={}".format(
-			self.competitor_id, self.name, self.country_code, self.debut, self.gender, self.team.name)
+		return "<Competitor id={} name={} nationality={} vehicle_number={}".format(
+			self.competitor_id, self.name, self.country_code, self.vehicle_number)
 
 
 
@@ -77,7 +77,7 @@ class Team(db.Model):
 	# official_website = db.Column(db.String(100), nullable=True)
 	# country_code = db.Column(db.String(3), nullable=False)
 
-	competitor = db.relationship('Competitor')
+	# competitor = db.relationship('Competitor')
 
 
 
@@ -94,22 +94,32 @@ class Result(db.Model):
 
 	__tablename__ = "results"
 
-	fastest_lap_time = db.Column(db.String, primary_key=True, nullable=False)
+	fastest_lap_time = db.Column(db.String, nullable=False)
 	gap = db.Column(db.String, nullable=False)
 	# grid = db.Column(db.Integer, nullable=False) #how to add P in front of position integer on grid
 	# laps = db.Column(db.Integer, nullable=True)
 	# podiums = db.Column(db.Integer, nullable=True)
 	# points = db.Column(db.Integer, nullable=True)
 	# pole_positions = db.Column(db. Integer, nullable=True)
-	position = db.Column(db.Integer, nullable=False)
+	position = db.Column(db.Integer, primary_key=True, nullable=False)
 	vehicle_number = db.Column(db.Integer, nullable=False)
 	# status = db.Column(db.String, nullable=False)
 	# victories = db.Column(db.Integer, nullable=False)
 	# victory_pole_fastest_lap = db.Column(db.Integer, nullable=False)
 
 	#create a variable that is based on the value that exists in the venue
-	venue = db.relationship('Venue.venue_id')
-	competitor_id = db.relationship('Competitor', backref='result')
+
+	venue_id = db.Column(db.Integer,
+						 db.ForeignKey('venues.venue_id'))
+	competitor_id = db.Column(db.Integer,
+							  db.ForeignKey('competitors.competitor_id'))
+	venue = db.relationship("Venue",
+							backref=db.backref("results",
+												order_by=position))
+	competitor = db.relationship("Competitor", 
+									backref=db.backref("results",
+														order_by=position))
+
 
 	def __repr__(self):
 		"""Define and display all the values of the result."""
@@ -160,7 +170,7 @@ def connect_to_db(app):
 
 	#Configure to use our Postgres databse
 	app.config['SQLALCHEMY_DATABASE_URI'] ='postgresql:///results' #double check this 
-	app.config['SQLALCHEMY_ECHO'] = True
+	app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 	db.app = app
 	db.init_app(app)
 
@@ -169,6 +179,7 @@ if __name__ == "__main__":
 
 	# So that we can use Flask-SQLAlchemy, we'll make a Flask app
 	from flask import Flask
+	# from server import app
 
 	app = Flask(__name__)
 

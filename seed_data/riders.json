@@ -1,11 +1,11 @@
 [{
-    "id": "sr:competitor:21999",
+    "id": "21999",
     "name": "Marquez, Marc",
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
-        "id": "sr:competitor:22037",
+        "id": "22037",
         "name": "Repsol Honda Team",
         "gender": "male",
         "nationality": "Belgium",
@@ -24,13 +24,13 @@
         "victory_pole_and_fastest_lap": 3
     }
 }, {
-    "id": "sr:competitor:4596",
+    "id": "4596",
     "name": "Dovizioso, Andrea",
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
     "team": {
-        "id": "sr:competitor:4567",
+        "id": "4567",
         "name": "Mission Winnow Ducati",
         "gender": "male",
         "nationality": "Italy",
@@ -48,13 +48,13 @@
         "fastest_laps": 5
     }
 }, {
-    "id": "sr:competitor:4540",
+    "id": "4540",
     "name": "Rossi, Valentino",
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
     "team": {
-        "id": "sr:competitor:38777",
+        "id": "38777",
         "name": "Monster Energy Yamaha Motogp",
         "gender": "male",
         "nationality": "Italy",
@@ -70,13 +70,13 @@
         "podiums": 5
     }
 }, {
-    "id": "sr:competitor:49896",
+    "id": "49896",
     "name": "Vinales, Maverick",
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
-        "id": "sr:competitor:38777",
+        "id": "38777",
         "name": "Monster Energy Yamaha Motogp",
         "gender": "male",
         "nationality": "Italy",
@@ -94,13 +94,13 @@
         "fastest_laps": 2
     }
 }, {
-    "id": "sr:competitor:63740",
+    "id": "63740",
     "name": "Rins, Alex",
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
-        "id": "sr:competitor:191644",
+        "id": "191644",
         "name": "Team Suzuki Ecstar",
         "gender": "male",
         "nationality": "Japan",
@@ -116,13 +116,13 @@
         "fastest_laps": 1
     }
 }, {
-    "id": "sr:competitor:34971",
+    "id": "34971",
     "name": "Zarco, Johann",
     "gender": "male",
     "nationality": "France",
     "country_code": "FRA",
     "team": {
-        "id": "sr:competitor:299024",
+        "id": "299024",
         "name": "Red Bull KTM Factory Racing",
         "gender": "male",
         "nationality": "Austria",
@@ -138,13 +138,13 @@
         "podiums": 3
     }
 }, {
-    "id": "sr:competitor:49401",
+    "id": "49401",
     "name": "Crutchlow, Cal",
     "gender": "male",
     "nationality": "Great Britain",
     "country_code": "GBR",
     "team": {
-        "id": "sr:competitor:58959",
+        "id": "58959",
         "name": "Lcr Honda Castrol",
         "gender": "male",
         "nationality": "Japan",
@@ -161,13 +161,13 @@
         "podiums": 3
     }
 }, {
-    "id": "sr:competitor:63668",
+    "id": "63668",
     "name": "Petrucci, Danilo",
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
     "team": {
-        "id": "sr:competitor:4567",
+        "id": "4567",
         "name": "Mission Winnow Ducati",
         "gender": "male",
         "nationality": "Italy",
@@ -183,13 +183,13 @@
         "fastest_laps": 1
     }
 }, {
-    "id": "sr:competitor:4603",
+    "id": "4603",
     "name": "Lorenzo, Jorge",
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
-        "id": "sr:competitor:22037",
+        "id": "22037",
         "name": "Repsol Honda Team",
         "gender": "male",
         "nationality": "Belgium",
@@ -208,13 +208,13 @@
         "victory_pole_and_fastest_lap": 1
     }
 }, {
-    "id": "sr:competitor:4986",
+    "id": "4986",
     "name": "Iannone, Andrea",
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
     "team": {
-        "id": "sr:competitor:91680",
+        "id": "91680",
         "name": "Aprilia Racing Team Gresini",
         "gender": "male",
         "nationality": "Italy",
@@ -229,13 +229,13 @@
         "podiums": 4
     }
 }, {
-    "id": "sr:competitor:4579",
+    "id": "4579",
     "name": "Pedrosa, Daniel",
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
-        "id": "sr:competitor:22037",
+        "id": "22037",
         "name": "Repsol Honda Team",
         "gender": "male",
         "nationality": "Belgium",
@@ -249,7 +249,7 @@
         "races_with_points": 13
     }
 }, {
-    "id": "sr:competitor:4599",
+    "id": "4599",
     "name": "Bautista, Alvaro",
     "gender": "male",
     "nationality": "Spain",
@@ -262,13 +262,13 @@
         "races_with_points": 14
     }
 }, {
-    "id": "sr:competitor:53145",
+    "id": "53145",
     "name": "Miller, Jack",
     "gender": "male",
     "nationality": "Australia",
     "country_code": "AUS",
     "team": {
-        "id": "sr:competitor:22039",
+        "id": "22039",
         "name": "Alma Pramac Racing",
         "gender": "male",
         "nationality": "Italy",
@@ -283,13 +283,13 @@
         "pole_positions": 1
     }
 }, {
-    "id": "sr:competitor:5953",
+    "id": "5953",
     "name": "Espargaro, Pol",
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
-        "id": "sr:competitor:299024",
+        "id": "299024",
         "name": "Red Bull KTM Factory Racing",
         "gender": "male",
         "nationality": "Austria",
@@ -304,7 +304,7 @@
         "podiums": 1
     }
 }, {
-    "id": "sr:competitor:145684",
+    "id": "145684",
     "name": "Morbidelli, Franco",
     "gender": "male",
     "nationality": "Italy",
@@ -317,7 +317,7 @@
         "races_with_points": 14
     }
 }, {
-    "id": "sr:competitor:59051",
+    "id": "59051",
     "name": "Syahrin Abdullah, Hafizh",
     "gender": "male",
     "nationality": "Malaysia",
@@ -330,13 +330,13 @@
         "races_with_points": 10
     }
 }, {
-    "id": "sr:competitor:4976",
+    "id": "4976",
     "name": "Espargaro, Aleix",
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
-        "id": "sr:competitor:91680",
+        "id": "91680",
         "name": "Aprilia Racing Team Gresini",
         "gender": "male",
         "nationality": "Italy",
@@ -350,13 +350,13 @@
         "races_with_points": 9
     }
 }, {
-    "id": "sr:competitor:5854",
+    "id": "5854",
     "name": "Smith, Bradley",
     "gender": "male",
     "nationality": "Great Britain",
     "country_code": "GBR",
     "team": {
-        "id": "sr:competitor:299024",
+        "id": "299024",
         "name": "Red Bull KTM Factory Racing",
         "gender": "male",
         "nationality": "Austria",
@@ -370,13 +370,13 @@
         "races_with_points": 11
     }
 }, {
-    "id": "sr:competitor:5557",
+    "id": "5557",
     "name": "Rabat, Esteve",
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
-        "id": "sr:competitor:65686",
+        "id": "65686",
         "name": "Reale Avintia Racing",
         "gender": "male",
         "nationality": "Spain",
@@ -390,13 +390,13 @@
         "races_with_points": 7
     }
 }, {
-    "id": "sr:competitor:8003",
+    "id": "8003",
     "name": "Nakagami, Takaaki",
     "gender": "male",
     "nationality": "Japan",
     "country_code": "JPN",
     "team": {
-        "id": "sr:competitor:58959",
+        "id": "58959",
         "name": "Lcr Honda Castrol",
         "gender": "male",
         "nationality": "Japan",
@@ -410,13 +410,13 @@
         "races_with_points": 11
     }
 }, {
-    "id": "sr:competitor:22000",
+    "id": "22000",
     "name": "Redding, Scott",
     "gender": "male",
     "nationality": "Great Britain",
     "country_code": "GBR",
     "team": {
-        "id": "sr:competitor:91680",
+        "id": "91680",
         "name": "Aprilia Racing Team Gresini",
         "gender": "male",
         "nationality": "Italy",
@@ -430,13 +430,13 @@
         "races_with_points": 7
     }
 }, {
-    "id": "sr:competitor:4795",
+    "id": "4795",
     "name": "Pirro, Michaele",
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
     "team": {
-        "id": "sr:competitor:4567",
+        "id": "4567",
         "name": "Mission Winnow Ducati",
         "gender": "male",
         "nationality": "Italy",
@@ -450,13 +450,13 @@
         "races_with_points": 2
     }
 }, {
-    "id": "sr:competitor:4983",
+    "id": "4983",
     "name": "Abraham, Karel",
     "gender": "male",
     "nationality": "Czech Republic",
     "country_code": "CZE",
     "team": {
-        "id": "sr:competitor:65686",
+        "id": "65686",
         "name": "Reale Avintia Racing",
         "gender": "male",
         "nationality": "Spain",
@@ -470,7 +470,7 @@
         "races_with_points": 5
     }
 }, {
-    "id": "sr:competitor:5019",
+    "id": "5019",
     "name": "Bradl, Stefan",
     "gender": "male",
     "nationality": "Germany",
@@ -483,13 +483,13 @@
         "races_with_points": 2
     }
 }, {
-    "id": "sr:competitor:4605",
+    "id": "4605",
     "name": "Kallio, Mika",
     "gender": "male",
     "nationality": "Finland",
     "country_code": "FIN",
     "team": {
-        "id": "sr:competitor:299024",
+        "id": "299024",
         "name": "Red Bull KTM Factory Racing",
         "gender": "male",
         "nationality": "Austria",
@@ -503,7 +503,7 @@
         "races_with_points": 1
     }
 }, {
-    "id": "sr:competitor:4623",
+    "id": "4623",
     "name": "Nakasuga, Katsuyuki",
     "gender": "male",
     "nationality": "Japan",
@@ -516,13 +516,13 @@
         "races_with_points": 1
     }
 }, {
-    "id": "sr:competitor:42631",
+    "id": "42631",
     "name": "Simeon, Xavier",
     "gender": "male",
     "nationality": "Belgium",
     "country_code": "BEL",
     "team": {
-        "id": "sr:competitor:65686",
+        "id": "65686",
         "name": "Reale Avintia Racing",
         "gender": "male",
         "nationality": "Spain",
@@ -536,13 +536,13 @@
         "races_with_points": 1
     }
 }, {
-    "id": "sr:competitor:43076",
+    "id": "43076",
     "name": "Torres, Jordi",
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
-        "id": "sr:competitor:65686",
+        "id": "65686",
         "name": "Reale Avintia Racing",
         "gender": "male",
         "nationality": "Spain",
@@ -556,7 +556,7 @@
         "races_with_points": 1
     }
 }, {
-    "id": "sr:competitor:4607",
+    "id": "4607",
     "name": "Luthi, Thomas",
     "gender": "male",
     "nationality": "Switzerland",
@@ -567,13 +567,13 @@
         "races": 18
     }
 }, {
-    "id": "sr:competitor:245639",
+    "id": "245639",
     "name": "Jones, Mike",
     "gender": "male",
     "nationality": "Australia",
     "country_code": "AUS",
     "team": {
-        "id": "sr:competitor:65686",
+        "id": "65686",
         "name": "Reale Avintia Racing",
         "gender": "male",
         "nationality": "Spain",
@@ -585,13 +585,13 @@
         "races": 1
     }
 }, {
-    "id": "sr:competitor:4585",
+    "id": "4585",
     "name": "Guintoli, Sylvain",
     "gender": "male",
     "nationality": "France",
     "country_code": "FRA",
     "team": {
-        "id": "sr:competitor:191644",
+        "id": "191644",
         "name": "Team Suzuki Ecstar",
         "gender": "male",
         "nationality": "Japan",
@@ -603,13 +603,13 @@
         "races": 3
     }
 }, {
-    "id": "sr:competitor:191708",
+    "id": "191708",
     "name": "Ponsson, Christophe",
     "gender": "male",
     "nationality": "Netherlands",
     "country_code": "NLD",
     "team": {
-        "id": "sr:competitor:65686",
+        "id": "65686",
         "name": "Reale Avintia Racing",
         "gender": "male",
         "nationality": "Spain",
