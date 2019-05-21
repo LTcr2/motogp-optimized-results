@@ -45,24 +45,58 @@ def homepage():
 
 
 ### First try at getting just 'Marc Marquez' and storing it as a variable ###
-@app.route("/get-competitor-name", methods=['GET'])
-def get_competitor_name():
+@app.route("/competitors", methods=['GET'])
+def competitor_list():
 	"""get info from API endpoints, 
 	convert from json to python dictionary,
 	write to database.
 
 	motogp/trial/v2/en/competitors/:competitor_id/profile:format
 	"""
+	competitors = Competitor.query.all()
+	return render_template('/competitors_list.html', competitors=competitors)
 
-	competitor_name = data['competitor']
+
+@app.route("/competitors/<int:competitor_id>")
+def competitor_detail(competitor_id):
+	"""Show info about specific rider"""
+
+	competitor = Competitor.query.get(competitor_id)
+	return render_template('/competitor.html', competitor=competitor)
 
 
-	return render_template('/competitor_profile.html')
+@app.route("/teams")
+def teams_list():
+	"""Show list of teams"""
 
-@app.route("/competitor-profile/<int:competitor_id>")
-def show_comp_profile():
+	teams = Team.query.order_by('points').all()
+	return render_template('teams.html', teams=teams)
 
-	return render_template('/competitor_profile.html', competitor_id=competitor_id)
+@app.route("/teams/<int:team_id", methods=['GET'])
+def team_detail():
+	"""Show info about a specific team"""
+
+	team = Team.query.get(team_id)
+	return render_template('teams.html', team=team)
+
+
+
+@app.route("/venues")
+def venue_list():
+	"""Show list of stages in the 2018 Championship"""
+
+	venues = Venue.query.all()
+	return render_template('venues.html')
+
+
+@app.route("/venues/<int:venue_id", methods=['GET'])
+def venue_detail(venue_id):
+	"""Show details about a specific venue"""
+
+	venue = Venue.query.get(venue_id)
+	return render_template('venues.html', venue=venue)
+
+
 
 
 
@@ -80,11 +114,11 @@ def show_comp_profile():
 
 if __name__ == "__main__":
 
-	# app.debug = True
+	app.debug = True
 
 	connect_to_db(app)
 
-	# DebugToolbarExtension(app)
+	DebugToolbarExtension(app)
 
 app.run(host="0.0.0.0")
 
