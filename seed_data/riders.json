@@ -254,6 +254,9 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "team": {
+        "name": "None"
+    },
     "result": {
         "points": 105,
         "bike_number": 19,
@@ -309,6 +312,9 @@
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
+    "team": {
+        "name": "None"
+    },
     "result": {
         "points": 50,
         "bike_number": 21,
@@ -322,6 +328,9 @@
     "gender": "male",
     "nationality": "Malaysia",
     "country_code": "MYS",
+    "team": {
+        "name": "None"
+    },
     "result": {
         "points": 46,
         "bike_number": 55,
@@ -475,6 +484,9 @@
     "gender": "male",
     "nationality": "Germany",
     "country_code": "DEU",
+    "team": {
+        "name": "None"
+    },
     "result": {
         "points": 10,
         "bike_number": 6,
@@ -508,6 +520,9 @@
     "gender": "male",
     "nationality": "Japan",
     "country_code": "JPN",
+    "team": {
+        "name": "None"
+    },
     "result": {
         "points": 2,
         "bike_number": 89,
@@ -542,6 +557,9 @@
     "nationality": "Spain",
     "country_code": "ESP",
     "team": {
+        "name": "None"
+    },
+    "team": {
         "id": "65686",
         "name": "Reale Avintia Racing",
         "gender": "male",
@@ -561,6 +579,9 @@
     "gender": "male",
     "nationality": "Switzerland",
     "country_code": "CHE",
+    "team": {
+        "name": "None"
+    },
     "result": {
         "bike_number": 12,
         "position": 29,

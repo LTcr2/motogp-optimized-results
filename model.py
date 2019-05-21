@@ -40,7 +40,7 @@ class Competitor(db.Model):
 	"""
 
 	# result = db.relationship('Result'), db.ForeignKey('competitor_id')
-	# team = db.relationship('Team'), db.ForeignKey('team.id')
+	team = db.Column(db.String, nullable=True)
 
 	"""
 	alternative relationship syntax: backref
@@ -58,8 +58,8 @@ class Competitor(db.Model):
 	def __repr__(self):
 		""" Returns representation of class information"""
 
-		return "<Competitor id={} name={} nationality={} vehicle_number={}".format(
-			self.competitor_id, self.name, self.country_code, self.vehicle_number)
+		return "<Competitor id={} name={} nationality={} vehicle_number={} team={}".format(
+			self.competitor_id, self.name, self.country_code, self.vehicle_number, self.team)
 
 
 
@@ -70,21 +70,27 @@ class Team(db.Model):
 
 	team_id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(100), nullable=False)
-	vehicle_chassis = db.Column(db.String(50), nullable=False)
+	country_code = db.Column(db.String(3), nullable=False)
 
+	position = db.Column(db.Integer, nullable=False)
+	podiums = db.Column(db.Integer, nullable=True)
+	points = db.Column(db.Integer, nullable=True)
+	victories = db.Column(db.Integer, nullable=True)
+	# vehicle_chassis = db.Column(db.String(50), nullable=False)
 	# foundation_year = db.Column(db.Date, nullable=False)
+	# competitor = db.relationship('Competitor')
+
+	#### probably don't need these ####
 	# location = db.Column(db.String(70), nullable=False)
 	# official_website = db.Column(db.String(100), nullable=True)
-	# country_code = db.Column(db.String(3), nullable=False)
-
-	# competitor = db.relationship('Competitor')
+	
 
 
 
 	def __repr__(self):
 		
-		return "<id={} name={} foundation_year={} location={} vehicle_chassis={} country_code={}".format(
-			self.team_id, self.name, self.foundation_year, self.location, self.vehicle_chassis, self.country_code)
+		return "<Team id={} name={} country_code={} victories={} position= {} podiums={}".format(
+			self.team_id, self.name, self.country_code, self.victories, self.position, self.podiums, self.points)
 
 
 
@@ -137,20 +143,24 @@ class Venue(db.Model):
 
 	venue_id = db.Column(db.Integer, primary_key=True, nullable=False)
 	city = db.Column(db.String(50), nullable=False)
-	name = db.Column(db.String(50), nullable=True)
+	name = db.Column(db.String(100), nullable=True)
 	# country = db.Column(db.String(50), nullable=False)
 	country_code = db.Column(db.String(3), nullable=False)
-	lefts = db.Column(db.Integer, nullable=False)
-	rights = db.Column(db.Integer, nullable=False)
-	length = db.Column(db.Integer, nullable=False)
-	debut = db.Column(db.Integer, nullable=False)
-	# turns = db.Column(db.Integer(curves_left + curves_right))
+	description = db.Column(db.String(150), nullable=False)
+	status = db.Column(db.String(20), nullable=False)
+	# lefts = db.Column(db.Integer, nullable=False)
+	# rights = db.Column(db.Integer, nullable=False)
+	length = db.Column(db.Float, nullable=False)
+	# debut = db.Column(db.Integer, nullable=False)
+	turns = db.Column(db.Integer, nullable=False)
+	#latitude = db.Column(db.Integer, nullable=False)
+	#longitude = db.Column(db.Integer, nullable=False)
 
 
 	def __repr__(self):
 		"""Define and display Venue class information"""
 
-		return f"<Venue id={self.venue_id} city={self.city} name={self.name} country={self.country_code} lefts={self.lefts} rights={self.rights}>"
+		return f"<Venue id={self.venue_id} city={self.city} name={self.city} country={self.country_code} description={self.description} status={self.status} length={self.length} turns={self.turns}>"
 
 
 

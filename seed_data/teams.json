@@ -1,179 +1,179 @@
-"teams": [{
-            "id": "sr:competitor:22037",
-            "name": "Repsol Honda Team",
-            "gender": "male",
-            "nationality": "Belgium",
-            "country_code": "BEL",
-            "result": {
-                "points": 438,
-                "position": 1,
-                "victories": 9,
-                "races": 18,
-                "races_with_points": 15,
-                "pole_positions": 7,
-                "podiums": 14,
-                "fastest_laps": 7,
-                "victory_pole_and_fastest_lap": 3,
-                "points_both_drivers": 3
-            }
-        }, {
-            "id": "sr:competitor:4567",
-            "name": "Mission Winnow Ducati",
-            "gender": "male",
-            "nationality": "Italy",
-            "country_code": "ITA",
-            "result": {
-                "points": 392,
-                "position": 2,
-                "victories": 7,
-                "races": 18,
-                "races_with_points": 16,
-                "pole_positions": 6,
-                "podiums": 13,
-                "fastest_laps": 7,
-                "victory_pole_and_fastest_lap": 1,
-                "points_both_drivers": 3
-            }
-        }, {
-            "id": "sr:competitor:38777",
-            "name": "Monster Energy Yamaha Motogp",
-            "gender": "male",
-            "nationality": "Italy",
-            "country_code": "ITA",
-            "result": {
-                "points": 391,
-                "position": 3,
-                "victories": 1,
-                "races": 18,
-                "races_with_points": 18,
-                "pole_positions": 2,
-                "podiums": 10,
-                "fastest_laps": 2,
-                "points_both_drivers": 4
-            }
-        }, {
-            "id": "sr:competitor:191644",
-            "name": "Team Suzuki Ecstar",
-            "gender": "male",
-            "nationality": "Japan",
-            "country_code": "JPN",
-            "result": {
-                "points": 302,
-                "position": 4,
-                "races": 18,
-                "races_with_points": 18,
-                "podiums": 9,
-                "fastest_laps": 1,
-                "points_both_drivers": 2
-            }
-        }, {
-            "id": "sr:competitor:22039",
-            "name": "Alma Pramac Racing",
-            "gender": "male",
-            "nationality": "Italy",
-            "country_code": "ITA",
-            "result": {
-                "points": 235,
-                "position": 5,
-                "races": 18,
-                "races_with_points": 17,
-                "pole_positions": 1,
-                "podiums": 1,
-                "fastest_laps": 1,
-                "points_both_drivers": 4
-            }
-        }, {
-            "id": "sr:competitor:41744",
-            "name": "Tech 3 Racing",
-            "gender": "male",
-            "nationality": "France",
-            "country_code": "FRA",
-            "result": {
-                "points": 204,
-                "position": 6,
-                "races": 18,
-                "races_with_points": 17,
-                "pole_positions": 2,
-                "podiums": 3,
-                "points_both_drivers": 3
-            }
-        }, {
-            "id": "sr:competitor:22035",
-            "name": "LCR Honda MotoGP",
-            "gender": "male",
-            "nationality": "Monaco",
-            "country_code": "MCO",
-            "result": {
-                "points": 191,
-                "position": 7,
-                "victories": 1,
-                "races": 18,
-                "races_with_points": 17,
-                "pole_positions": 1,
-                "podiums": 3,
-                "points_both_drivers": 1
-            }
-        }, {
-            "id": "sr:competitor:41728",
-            "name": "Angel Nieto Team",
-            "gender": "male",
-            "nationality": "Spain",
-            "country_code": "ESP",
-            "result": {
-                "points": 104,
-                "position": 8,
-                "races": 18,
-                "races_with_points": 16,
-                "points_both_drivers": 1
-            }
-        }, {
-            "id": "sr:competitor:299024",
-            "name": "Red Bull KTM Factory Racing",
-            "gender": "male",
-            "nationality": "Austria",
-            "country_code": "AUT",
-            "result": {
-                "points": 89,
-                "position": 9,
-                "races": 18,
-                "races_with_points": 15,
-                "podiums": 1,
-                "points_both_drivers": 2
-            }
-        }, {
-            "id": "sr:competitor:91680",
-            "name": "Aprilia Racing Team Gresini",
-            "gender": "male",
-            "nationality": "Italy",
-            "country_code": "ITA",
-            "result": {
-                "points": 64,
-                "position": 10,
-                "races": 18,
-                "races_with_points": 14
-            }
-        }, {
-            "id": "sr:competitor:41306",
-            "name": "EG 0,0 Marc VDS",
-            "gender": "male",
-            "nationality": "Belgium",
-            "country_code": "BEL",
-            "result": {
-                "points": 50,
-                "position": 11,
-                "races": 18,
-                "races_with_points": 13
-            }
-        }, {
-            "id": "sr:competitor:65686",
-            "name": "Reale Avintia Racing",
-            "gender": "male",
-            "nationality": "Spain",
-            "country_code": "ESP",
-            "result": {
-                "points": 37,
-                "position": 12,
-                "races": 18,
-                "races_with_points": 9
-            }
-        }]
+[{
+    "id": "22037",
+    "name": "Repsol Honda Team",
+    "gender": "male",
+    "nationality": "Belgium",
+    "country_code": "BEL",
+    "result": {
+        "points": 438,
+        "position": 1,
+        "victories": 9,
+        "races": 18,
+        "races_with_points": 15,
+        "pole_positions": 7,
+        "podiums": 14,
+        "fastest_laps": 7,
+        "victory_pole_and_fastest_lap": 3,
+        "points_both_drivers": 3
+    }
+}, {
+    "id": "4567",
+    "name": "Mission Winnow Ducati",
+    "gender": "male",
+    "nationality": "Italy",
+    "country_code": "ITA",
+    "result": {
+        "points": 392,
+        "position": 2,
+        "victories": 7,
+        "races": 18,
+        "races_with_points": 16,
+        "pole_positions": 6,
+        "podiums": 13,
+        "fastest_laps": 7,
+        "victory_pole_and_fastest_lap": 1,
+        "points_both_drivers": 3
+    }
+}, {
+    "id": "38777",
+    "name": "Monster Energy Yamaha Motogp",
+    "gender": "male",
+    "nationality": "Italy",
+    "country_code": "ITA",
+    "result": {
+        "points": 391,
+        "position": 3,
+        "victories": 1,
+        "races": 18,
+        "races_with_points": 18,
+        "pole_positions": 2,
+        "podiums": 10,
+        "fastest_laps": 2,
+        "points_both_drivers": 4
+    }
+}, {
+    "id": "191644",
+    "name": "Team Suzuki Ecstar",
+    "gender": "male",
+    "nationality": "Japan",
+    "country_code": "JPN",
+    "result": {
+        "points": 302,
+        "position": 4,
+        "races": 18,
+        "races_with_points": 18,
+        "podiums": 9,
+        "fastest_laps": 1,
+        "points_both_drivers": 2
+    }
+}, {
+    "id": "22039",
+    "name": "Alma Pramac Racing",
+    "gender": "male",
+    "nationality": "Italy",
+    "country_code": "ITA",
+    "result": {
+        "points": 235,
+        "position": 5,
+        "races": 18,
+        "races_with_points": 17,
+        "pole_positions": 1,
+        "podiums": 1,
+        "fastest_laps": 1,
+        "points_both_drivers": 4
+    }
+}, {
+    "id": "41744",
+    "name": "Tech 3 Racing",
+    "gender": "male",
+    "nationality": "France",
+    "country_code": "FRA",
+    "result": {
+        "points": 204,
+        "position": 6,
+        "races": 18,
+        "races_with_points": 17,
+        "pole_positions": 2,
+        "podiums": 3,
+        "points_both_drivers": 3
+    }
+}, {
+    "id": "22035",
+    "name": "LCR Honda MotoGP",
+    "gender": "male",
+    "nationality": "Monaco",
+    "country_code": "MCO",
+    "result": {
+        "points": 191,
+        "position": 7,
+        "victories": 1,
+        "races": 18,
+        "races_with_points": 17,
+        "pole_positions": 1,
+        "podiums": 3,
+        "points_both_drivers": 1
+    }
+}, {
+    "id": "41728",
+    "name": "Angel Nieto Team",
+    "gender": "male",
+    "nationality": "Spain",
+    "country_code": "ESP",
+    "result": {
+        "points": 104,
+        "position": 8,
+        "races": 18,
+        "races_with_points": 16,
+        "points_both_drivers": 1
+    }
+}, {
+    "id": "299024",
+    "name": "Red Bull KTM Factory Racing",
+    "gender": "male",
+    "nationality": "Austria",
+    "country_code": "AUT",
+    "result": {
+        "points": 89,
+        "position": 9,
+        "races": 18,
+        "races_with_points": 15,
+        "podiums": 1,
+        "points_both_drivers": 2
+    }
+}, {
+    "id": "91680",
+    "name": "Aprilia Racing Team Gresini",
+    "gender": "male",
+    "nationality": "Italy",
+    "country_code": "ITA",
+    "result": {
+        "points": 64,
+        "position": 10,
+        "races": 18,
+        "races_with_points": 14
+    }
+}, {
+    "id": "41306",
+    "name": "EG 0,0 Marc VDS",
+    "gender": "male",
+    "nationality": "Belgium",
+    "country_code": "BEL",
+    "result": {
+        "points": 50,
+        "position": 11,
+        "races": 18,
+        "races_with_points": 13
+    }
+}, {
+    "id": "65686",
+    "name": "Reale Avintia Racing",
+    "gender": "male",
+    "nationality": "Spain",
+    "country_code": "ESP",
+    "result": {
+        "points": 37,
+        "position": 12,
+        "races": 18,
+        "races_with_points": 9
+    }
+}]
