@@ -111,7 +111,37 @@ def load_venues(venues_json):
 def load_results(results_json):
 	"""load results summary into database"""
 
-	py_dict = json.loads(open(venues_json).read())
+	# import pdb; pdb.set_trace()
+
+	py_dict = json.loads(open(results_json).read())
+	#in py_dict, there is only one key
+	#this is 'stage'
+	stage = py_dict['stage']
+	#in stage, there are these keys
+	#'id', 'description', 'scheduled', 'scheduled_end', 'type', 'parents', 'stages', 'competitors', 'teams'
+	#STRINGS = id, description, scheduled, scheduled_end, type
+	#VALUES = sr:stage:337639, MotoGP 2018, 2018-03-16T11:55:00+00:00, 2018-11-18T14:00:00+00:00, season
+	#LIST = Parents = [{'id': 'sr:stage:8306', 'description': 'MotoGP', 'type': 'sport'}]
+	stages_list = stage['stages']
+	teams_list = stage['teams']
+	competitors_list = stage['competitors']
+
+	#To Do:
+	#Make Result Instances
+
+
+
+
+	#result = Result(competitor_id=competitor_id
+					 # venue_id=venue_id
+					 # etc=etc)
+					 #################### WORK ON THIS ###########################
+	# print(result)
+
+	# db.session.add(result)
+	# db.session.commit()
+
+
 
 	return(py_dict)
 

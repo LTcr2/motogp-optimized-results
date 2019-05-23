@@ -22,7 +22,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 16,
-        "length": 5.380,
+        "length": 5.380
     }, {
         "id": "337859",
         "city": "Termas de Río Hondo",
@@ -34,7 +34,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 14,
-        "length": 4.81,
+        "length": 4.81
     }, {
         "id": "338077",
         "city": "Austin",
@@ -46,7 +46,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 20,
-        "length": 5.513,
+        "length": 5.513
     }, {
         "id": "338295",
         "city": "Barcelona",
@@ -58,7 +58,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 13,
-        "length": 4.423,
+        "length": 4.423
     }, {
         "id": "338513",
         "city": "Le Castellet",
@@ -70,7 +70,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 11,
-        "length": 4.185,
+        "length": 4.185
     }, {
         "id": "338731",
         "city": "Monza",
@@ -82,7 +82,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 11,
-        "length": 5.793,
+        "length": 5.793
     }, {
         "id": "338949",
         "city": "Barcelona-Catalunya",
@@ -94,7 +94,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 16,
-        "length": 4.627,
+        "length": 4.627
     }, {
         "id": "339167",
         "city": "Assen",
@@ -106,7 +106,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 18,
-        "length": 4.545,
+        "length": 4.545
     }, {
         "id": "339385",
         "city": "Oberlungwitz",
@@ -118,7 +118,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 14,
-        "length": 3.700,
+        "length": 3.700
     }, {
         "id": "339603",
         "city": "Brno",
@@ -130,7 +130,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 14,
-        "length": 5.403,
+        "length": 5.403
     }, {
         "id": "339821",
         "city": "Spielberg",
@@ -142,7 +142,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 10,
-        "length": 4.318,
+        "length": 4.318
     }, {
         "id": "340039",
         "city": "Silverstone",
@@ -154,7 +154,7 @@
         "type": "event",
         "status": "Cancelled",
         "turns": 20,
-        "length": 5.891,
+        "length": 5.891
     }, {
         "id": "340257",
         "city": "Misano",
@@ -166,7 +166,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 16,
-        "length": 4.226,
+        "length": 4.226
     }, {
         "id": "340475",
         "city": "Alcañiz",
@@ -178,7 +178,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 16,
-        "length": 5.078,
+        "length": 5.078
     }, {
         "id": "340693",
         "city": "Buriram",
@@ -190,7 +190,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 12,
-        "length": 4.554,
+        "length": 4.554
     }, {
         "id": "340911",
         "city": "Motegi",
@@ -202,7 +202,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 14,
-        "length": 4.800,
+        "length": 4.800
     }, {
         "id": "341129",
         "city": "Ventnor",
@@ -214,7 +214,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 12,
-        "length": 4.445,
+        "length": 4.445
     }, {
         "id": "341347",
         "city": "Sepang",
@@ -226,7 +226,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 15,
-        "length": 5.543,
+        "length": 5.543
     }, {
         "id": "341565",
         "city": "Valenciana",
@@ -238,7 +238,7 @@
         "type": "event",
         "status": "Finished",
         "turns": 14,
-        "length": 4.005,
+        "length": 4.005
     }],
     "competitors": [{
         "id": "21999",
@@ -1042,4 +1042,5 @@
             "races_with_points": 9
         }
     }]
+}
 }
