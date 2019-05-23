@@ -100,15 +100,16 @@ class Result(db.Model):
 
 	__tablename__ = "results"
 
+	#i might need this id to refer to a specific result..
+	#rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
 	fastest_lap_time = db.Column(db.String, nullable=False)
 	gap = db.Column(db.String, nullable=False)
+	position = db.Column(db.Integer, primary_key=True, nullable=False)
 	# grid = db.Column(db.Integer, nullable=False) #how to add P in front of position integer on grid
 	# laps = db.Column(db.Integer, nullable=True)
 	# podiums = db.Column(db.Integer, nullable=True)
 	# points = db.Column(db.Integer, nullable=True)
 	# pole_positions = db.Column(db. Integer, nullable=True)
-	position = db.Column(db.Integer, primary_key=True, nullable=False)
-	vehicle_number = db.Column(db.Integer, nullable=False)
 	# status = db.Column(db.String, nullable=False)
 	# victories = db.Column(db.Integer, nullable=False)
 	# victory_pole_fastest_lap = db.Column(db.Integer, nullable=False)

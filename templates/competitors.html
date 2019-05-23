@@ -9,6 +9,13 @@
 
 	</div>
 
+	<ul>
+		{% for competitor in competitors %}
+		<li>
+			<a href="/competitors/{{ competitor.competitor_id }}">{{ competitor.name }}</a>
+		</li>
+		{% endfor %}
+	</ul>
 
 
 {% endblock %}

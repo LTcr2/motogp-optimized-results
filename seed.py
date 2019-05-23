@@ -108,14 +108,19 @@ def load_venues(venues_json):
 
 	# import pdb; pdb.set_trace()
 
-# def load_results(results_json):
-# 	"""load results summary into database"""
+def load_results(results_json):
+	"""load results summary into database"""
 
-# 	py_dict = json.loads(open(venues_json).read())
-# 	stage = py_dict['stage']
-# 	venues = stage['stages']
-# 	competitors = stage['competitors']
-# 	teams = stage['teams']
+	py_dict = json.loads(open(venues_json).read())
+
+	return(py_dict)
+
+	# for item in py_dict:
+	# 	stage = py_dict['stage']
+	# 	venues = stage['stages']
+	# 	competitors = stage['competitors']
+	# 	teams = stage['teams']
+
 
 
 if __name__ == "__main__":
@@ -126,9 +131,10 @@ if __name__ == "__main__":
 	teams_json = "seed_data/teams.json"
 	venues_json = "seed_data/venues.json"
 	results_json = "seed_data/results.json"
-	load_competitors(riders_json)
-	load_teams(teams_json)
-	load_venues(venues_json)
+	# load_competitors(riders_json)
+	# load_teams(teams_json)
+	# load_venues(venues_json)
+	load_results(results_json)
 
 
 
