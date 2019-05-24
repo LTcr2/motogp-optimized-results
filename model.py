@@ -154,14 +154,14 @@ class Venue(db.Model):
 	length = db.Column(db.Float, nullable=False)
 	# debut = db.Column(db.Integer, nullable=False)
 	turns = db.Column(db.Integer, nullable=False)
-	#latitude = db.Column(db.Integer, nullable=False)
-	#longitude = db.Column(db.Integer, nullable=False)
+	latitude = db.Column(db.Float, nullable=False)
+	longitude = db.Column(db.Float, nullable=False)
 
 
 	def __repr__(self):
 		"""Define and display Venue class information"""
 
-		return f"<Venue id={self.venue_id} city={self.city} name={self.city} country={self.country_code} description={self.description} status={self.status} length={self.length} turns={self.turns}>"
+		return f"<Venue id={self.venue_id} city={self.city} name={self.city} country={self.country_code} description={self.description} status={self.status} length={self.length} turns={self.turns} latitude={self.latitude} longitude={self.longitude}> "
 
 
 

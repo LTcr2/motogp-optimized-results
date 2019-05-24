@@ -93,6 +93,8 @@ def load_venues(venues_json):
 		status = venue['status']
 		length = venue['length']
 		turns = venue['turns']
+		latitude = venue['latitude']
+		longitude = venue['longitude']
 		venue = Venue(venue_id=venue_id, 
 					  city=city, 
 					  name=name,
@@ -100,7 +102,9 @@ def load_venues(venues_json):
 					  description=description, 
 					  status=status,
 					  length=length,
-					  turns=turns,)
+					  turns=turns,
+					  longitude=longitude,
+					  latitude=latitude)
 		print(venue)
 
 		db.session.add(venue)
@@ -161,9 +165,9 @@ if __name__ == "__main__":
 	teams_json = "seed_data/teams.json"
 	venues_json = "seed_data/venues.json"
 	results_json = "seed_data/results.json"
-	# load_competitors(riders_json)
-	# load_teams(teams_json)
-	# load_venues(venues_json)
+	load_competitors(riders_json)
+	load_teams(teams_json)
+	load_venues(venues_json)
 	load_results(results_json)
 
 
