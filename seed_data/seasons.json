@@ -1,0 +1,55 @@
+{"generated_at":"2019-05-24T20:23:33+00:00",
+	"schema":"http:\/\/schemas.sportradar.com\/bsa\/motogp\/v1\/json\/endpoints\/motogp\/seasons.json",
+	"stages":
+	[
+		{
+		"id":"sr:stage:437055",
+		"description":"Moto2 2019",
+		"scheduled":"2019-03-08T10:45:00+00:00",
+		"scheduled_end":"2019-11-17T12:20:00+00:00",
+		"type":"season"
+		},{
+		"id":"sr:stage:441161",
+		"description":"Moto3 2019",
+		"scheduled":"2019-03-08T09:50:00+00:00",
+		"scheduled_end":"2019-11-17T11:00:00+00:00",
+		"type":"season"
+		},{
+		"id":"sr:stage:432911",
+		"description":"MotoGP 2019",
+		"scheduled":"2019-03-07T08:00:00+00:00",
+		"scheduled_end":"2019-11-17T14:00:00+00:00",
+		"type":"season"
+		},{
+		"id":"sr:stage:427873",
+		"description":"Superbike 2019",
+		"scheduled":"2019-02-21T22:45:00+00:00",
+		"scheduled_end":"2019-10-26T00:00:00+00:00",
+		"type":"season"
+		},{
+		"id":"sr:stage:337639",
+		"description":"MotoGP 2018",
+		"scheduled":"2018-03-16T11:55:00+00:00",
+		"scheduled_end":"2018-11-18T14:00:00+00:00",
+		"type":"season"
+		},{
+		"id":"sr:stage:333533",
+		"description":"Moto2 2018",
+		"scheduled":"2018-03-16T10:45:00+00:00",
+		"scheduled_end":"2018-11-18T12:20:00+00:00",
+		"type":"season"
+		},{
+		"id":"sr:stage:329427",
+		"description":"Moto3 2018",
+		"scheduled":"2018-03-16T09:50:00+00:00",
+		"scheduled_end":"2018-11-18T11:00:00+00:00",
+		"type":"season"
+		},{
+		"id":"sr:stage:342963",
+		"description":"Superbike 2018",
+		"scheduled":"2018-02-22T23:25:00+00:00",
+		"scheduled_end":"2018-11-27T19:00:00+00:00",
+		"type":"season"
+		}
+	]
+}

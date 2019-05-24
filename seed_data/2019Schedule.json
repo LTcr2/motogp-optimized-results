@@ -1,0 +1,1247 @@
+{
+	"generated_at":"2019-05-24T21:17:16+00:00",
+	"schema":"http:\/\/schemas.sportradar.com\/bsa\/motogp\/v1\/json\/endpoints\/motogp\/stages.json",
+	"stages":
+	[{
+	"id":"sr:stage:432913",
+	"description":"Grand Prix of Qatar 2019",
+	"scheduled":"2019-03-08T12:40:00+00:00",
+	"scheduled_end":"2019-03-10T18:00:00+00:00",
+	"type":"event",
+	"status":"Finished",
+	"stages":
+	[
+		{
+		"id":"sr:stage:432915",
+		"description":"Practice 1",
+		"scheduled":"2019-03-08T12:40:00+00:00",
+		"scheduled_end":"2019-03-08T13:25:00+00:00",
+		"type":"practice"
+		},
+		{
+		"id":"sr:stage:432917",
+		"description":"Practice 2",
+		"scheduled":"2019-03-08T17:00:00+00:00",
+		"scheduled_end":"2019-03-08T17:45:00+00:00",
+		"type":"practice"
+		},
+{
+	"id":"sr:stage:432919",
+	"description":"Practice 3",
+"scheduled":"2019-03-09T12:15:00+00:00",
+"scheduled_end":"2019-03-09T13:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:432921",
+	"description":"Practice 4",
+"scheduled":"2019-03-09T16:20:00+00:00",
+"scheduled_end":"2019-03-09T16:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:432923",
+	"description":"Qualifying",
+"scheduled":"2019-03-09T17:00:00+00:00",
+"scheduled_end":"2019-03-09T17:40:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:432925",
+	"description":"Q1",
+	"scheduled":"2019-03-09T17:00:00+00:00",
+	"scheduled_end":"2019-03-09T17:15:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:432927",
+	"description":"Q2",
+"scheduled":"2019-03-09T17:25:00+00:00",
+"scheduled_end":"2019-03-09T17:40:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:432929",
+	"description":"Race",
+"scheduled":"2019-03-10T17:00:00+00:00",
+"scheduled_end":"2019-03-10T18:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:433131",
+	"description":"Gran Premio de la Republica Argentina 2019",
+"scheduled":"2019-03-29T13:50:00+00:00",
+"scheduled_end":"2019-03-31T19:00:00+00:00",
+"type":"event",
+"status":"Finished",
+"stages":
+	[{
+	"id":"sr:stage:433133",
+	"description":"Practice 1",
+	"scheduled":"2019-03-29T13:50:00+00:00",
+	"scheduled_end":"2019-03-29T14:35:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:433135",
+	"description":"Practice 2",
+"scheduled":"2019-03-29T18:05:00+00:00",
+"scheduled_end":"2019-03-29T18:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433137",
+	"description":"Practice 3",
+"scheduled":"2019-03-30T13:50:00+00:00",
+"scheduled_end":"2019-03-30T14:35:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433139",
+	"description":"Practice 4",
+"scheduled":"2019-03-30T17:25:00+00:00",
+"scheduled_end":"2019-03-30T17:55:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433141",
+	"description":"Qualifying",
+"scheduled":"2019-03-30T18:05:00+00:00",
+"scheduled_end":"2019-03-30T18:45:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:433143",
+	"description":"Q1",
+	"scheduled":"2019-03-30T18:05:00+00:00",
+	"scheduled_end":"2019-03-30T18:20:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:433145",
+	"description":"Q2",
+"scheduled":"2019-03-30T18:30:00+00:00",
+"scheduled_end":"2019-03-30T18:45:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:433147",
+	"description":"Race",
+"scheduled":"2019-03-31T18:00:00+00:00",
+"scheduled_end":"2019-03-31T19:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:433349",
+	"description":"Grand Prix of The Americas 2019",
+"scheduled":"2019-04-12T14:55:00+00:00",
+"scheduled_end":"2019-04-14T20:00:00+00:00",
+"type":"event",
+"status":"Finished",
+"stages":
+	[{
+	"id":"sr:stage:433351",
+	"description":"Practice 1",
+	"scheduled":"2019-04-12T14:55:00+00:00",
+	"scheduled_end":"2019-04-12T15:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:433353",
+	"description":"Practice 2",
+"scheduled":"2019-04-12T19:10:00+00:00",
+"scheduled_end":"2019-04-12T19:55:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433355",
+	"description":"Practice 3",
+"scheduled":"2019-04-13T14:55:00+00:00",
+"scheduled_end":"2019-04-13T15:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433357",
+	"description":"Practice 4",
+"scheduled":"2019-04-13T18:30:00+00:00",
+"scheduled_end":"2019-04-13T19:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433359",
+	"description":"Qualifying",
+"scheduled":"2019-04-13T19:10:00+00:00",
+"scheduled_end":"2019-04-13T19:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:433361",
+	"description":"Q1",
+	"scheduled":"2019-04-13T19:10:00+00:00",
+	"scheduled_end":"2019-04-13T19:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:433363",
+	"description":"Q2",
+"scheduled":"2019-04-13T19:35:00+00:00",
+"scheduled_end":"2019-04-13T19:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:433365",
+	"description":"Race",
+"scheduled":"2019-04-14T19:00:00+00:00",
+"scheduled_end":"2019-04-14T20:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:433567",
+	"description":"Gran Premio de Espana 2019",
+"scheduled":"2019-05-03T07:55:00+00:00",
+"scheduled_end":"2019-05-05T13:00:00+00:00",
+"type":"event",
+"status":"Finished",
+"stages":
+	[{
+	"id":"sr:stage:433569",
+	"description":"Practice 1",
+	"scheduled":"2019-05-03T07:55:00+00:00",
+	"scheduled_end":"2019-05-03T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:433571",
+	"description":"Practice 2",
+"scheduled":"2019-05-03T12:10:00+00:00",
+"scheduled_end":"2019-05-03T12:55:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433573",
+	"description":"Practice 3",
+"scheduled":"2019-05-04T07:55:00+00:00",
+"scheduled_end":"2019-05-04T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433575",
+	"description":"Practice 4",
+"scheduled":"2019-05-04T11:30:00+00:00",
+"scheduled_end":"2019-05-04T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433577",
+	"description":"Qualifying",
+"scheduled":"2019-05-04T12:10:00+00:00",
+"scheduled_end":"2019-05-04T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:433579",
+	"description":"Q1",
+	"scheduled":"2019-05-04T12:10:00+00:00",
+	"scheduled_end":"2019-05-04T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:433581",
+	"description":"Q2",
+"scheduled":"2019-05-04T12:35:00+00:00",
+"scheduled_end":"2019-05-04T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:433583",
+	"description":"Race",
+"scheduled":"2019-05-05T12:00:00+00:00",
+"scheduled_end":"2019-05-05T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:433785",
+	"description":"Grand Prix de France 2019",
+"scheduled":"2019-05-17T07:55:00+00:00",
+"scheduled_end":"2019-05-19T13:00:00+00:00",
+"type":"event",
+"status":"Finished",
+"stages":
+	[{
+	"id":"sr:stage:433787",
+	"description":"Practice 1",
+	"scheduled":"2019-05-17T07:55:00+00:00",
+	"scheduled_end":"2019-05-17T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:433789",
+	"description":"Practice 2",
+"scheduled":"2019-05-17T12:05:00+00:00",
+"scheduled_end":"2019-05-17T12:55:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433791",
+	"description":"Practice 3",
+"scheduled":"2019-05-18T07:55:00+00:00",
+"scheduled_end":"2019-05-18T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433793",
+	"description":"Practice 4",
+"scheduled":"2019-05-18T11:30:00+00:00",
+"scheduled_end":"2019-05-18T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:433795",
+	"description":"Qualifying",
+"scheduled":"2019-05-18T12:10:00+00:00",
+"scheduled_end":"2019-05-18T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:433797",
+	"description":"Q1",
+	"scheduled":"2019-05-18T12:10:00+00:00",
+	"scheduled_end":"2019-05-18T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:433799",
+	"description":"Q2",
+"scheduled":"2019-05-18T12:35:00+00:00",
+"scheduled_end":"2018-12-20T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:433801",
+	"description":"Race",
+"scheduled":"2019-05-19T12:00:00+00:00",
+"scheduled_end":"2019-05-19T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:434003",
+	"description":"Gran Premio d'Italia 2019",
+"scheduled":"2019-05-31T07:55:00+00:00",
+"scheduled_end":"2019-06-02T13:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:434005",
+	"description":"Practice 1",
+	"scheduled":"2019-05-31T07:55:00+00:00",
+	"scheduled_end":"2019-05-31T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:434007",
+	"description":"Practice 2",
+"scheduled":"2019-05-31T12:05:00+00:00",
+"scheduled_end":"2019-05-31T12:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434009",
+	"description":"Practice 3",
+"scheduled":"2019-06-01T07:55:00+00:00",
+"scheduled_end":"2019-06-01T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434011",
+	"description":"Practice 4",
+"scheduled":"2019-06-01T11:30:00+00:00",
+"scheduled_end":"2019-06-01T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434013",
+	"description":"Qualifying",
+"scheduled":"2019-06-01T12:10:00+00:00",
+"scheduled_end":"2019-06-01T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:434015",
+	"description":"Q1",
+	"scheduled":"2019-06-01T12:10:00+00:00",
+	"scheduled_end":"2019-06-01T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:434017",
+	"description":"Q2",
+"scheduled":"2019-06-01T12:35:00+00:00",
+"scheduled_end":"2019-06-01T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:434019",
+	"description":"Race",
+"scheduled":"2019-06-02T12:00:00+00:00",
+"scheduled_end":"2019-06-02T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:434221",
+	"description":"Circuit de Barcelona-Catalunya 2019",
+"scheduled":"2019-06-14T07:55:00+00:00",
+"scheduled_end":"2019-06-16T13:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:434223",
+	"description":"Practice 1",
+	"scheduled":"2019-06-14T07:55:00+00:00",
+	"scheduled_end":"2019-06-14T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:434225",
+	"description":"Practice 2",
+"scheduled":"2019-06-14T12:05:00+00:00",
+"scheduled_end":"2019-06-14T12:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434227",
+	"description":"Practice 3",
+"scheduled":"2019-06-15T07:55:00+00:00",
+"scheduled_end":"2019-06-15T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434229",
+	"description":"Practice 4",
+"scheduled":"2019-06-15T11:30:00+00:00",
+"scheduled_end":"2019-06-15T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434231",
+	"description":"Qualifying",
+"scheduled":"2019-06-15T12:10:00+00:00",
+"scheduled_end":"2019-06-15T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:434233",
+	"description":"Q1",
+	"scheduled":"2019-06-15T12:10:00+00:00",
+	"scheduled_end":"2019-06-15T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:434235",
+	"description":"Q2",
+"scheduled":"2019-06-15T12:35:00+00:00",
+"scheduled_end":"2019-06-15T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:434237",
+	"description":"Race",
+"scheduled":"2019-06-16T12:00:00+00:00",
+"scheduled_end":"2019-06-16T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:434439",
+	"description":"TT Assen 2019",
+"scheduled":"2019-06-28T07:55:00+00:00",
+"scheduled_end":"2019-06-30T13:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:434441",
+	"description":"Practice 1",
+	"scheduled":"2019-06-28T07:55:00+00:00",
+	"scheduled_end":"2019-06-28T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:434443",
+	"description":"Practice 2",
+"scheduled":"2019-06-28T12:05:00+00:00",
+"scheduled_end":"2019-06-28T12:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434445",
+	"description":"Practice 3",
+"scheduled":"2019-06-29T07:55:00+00:00",
+"scheduled_end":"2019-06-29T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434447",
+	"description":"Practice 4",
+"scheduled":"2019-06-29T11:30:00+00:00",
+"scheduled_end":"2019-06-29T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434449",
+	"description":"Qualifying",
+"scheduled":"2019-06-29T12:10:00+00:00",
+"scheduled_end":"2019-06-29T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:434451",
+	"description":"Q1",
+	"scheduled":"2019-06-29T12:10:00+00:00",
+	"scheduled_end":"2019-06-29T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:434453",
+	"description":"Q2",
+"scheduled":"2019-06-29T12:35:00+00:00",
+"scheduled_end":"2019-06-29T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:434455",
+	"description":"Race",
+"scheduled":"2019-06-30T12:00:00+00:00",
+"scheduled_end":"2019-06-30T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:434657",
+	"description":"Motorrad Grand Prix Deutschland 2018",
+"scheduled":"2019-07-05T07:55:00+00:00",
+"scheduled_end":"2019-07-07T13:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:434659",
+	"description":"Practice 1",
+	"scheduled":"2019-07-05T07:55:00+00:00",
+	"scheduled_end":"2019-07-05T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:434661",
+	"description":"Practice 2",
+"scheduled":"2019-07-05T12:05:00+00:00",
+"scheduled_end":"2019-07-05T12:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434663",
+	"description":"Practice 3",
+"scheduled":"2019-07-06T07:55:00+00:00",
+"scheduled_end":"2019-07-06T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434665",
+	"description":"Practice 4",
+"scheduled":"2019-07-06T11:30:00+00:00",
+"scheduled_end":"2019-07-06T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434667",
+	"description":"Qualifying",
+"scheduled":"2019-07-06T12:10:00+00:00",
+"scheduled_end":"2019-07-06T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:434669",
+	"description":"Q1",
+	"scheduled":"2019-07-06T12:10:00+00:00",
+	"scheduled_end":"2019-07-06T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:434671",
+	"description":"Q2",
+"scheduled":"2019-07-06T12:35:00+00:00",
+"scheduled_end":"2019-07-06T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:434673",
+	"description":"Race",
+"scheduled":"2019-07-07T12:00:00+00:00",
+"scheduled_end":"2019-07-07T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:434875",
+	"description":"Grand Prix Ceske Republiky 2019",
+"scheduled":"2019-08-02T07:55:00+00:00",
+"scheduled_end":"2019-08-04T13:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:434877",
+	"description":"Practice 1",
+	"scheduled":"2019-08-02T07:55:00+00:00",
+	"scheduled_end":"2019-08-02T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:434879",
+	"description":"Practice 2",
+"scheduled":"2019-08-02T12:05:00+00:00",
+"scheduled_end":"2019-08-02T12:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434881",
+	"description":"Practice 3",
+"scheduled":"2019-08-03T07:55:00+00:00",
+"scheduled_end":"2019-08-03T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434883",
+	"description":"Practice 4",
+"scheduled":"2019-08-03T11:30:00+00:00",
+"scheduled_end":"2019-08-03T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:434885",
+	"description":"Qualifying",
+"scheduled":"2019-08-03T12:10:00+00:00",
+"scheduled_end":"2019-08-03T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:434887",
+	"description":"Q1",
+	"scheduled":"2019-08-03T12:10:00+00:00",
+	"scheduled_end":"2019-08-03T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:434889",
+	"description":"Q2",
+"scheduled":"2019-08-03T12:35:00+00:00",
+"scheduled_end":"2019-08-03T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:434891",
+	"description":"Race",
+"scheduled":"2019-08-04T12:00:00+00:00",
+"scheduled_end":"2019-08-04T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:435093",
+	"description":"Motorrad Grand Prix von \u00d6sterreich 2019",
+"scheduled":"2019-08-09T07:55:00+00:00",
+"scheduled_end":"2019-08-11T13:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:435095",
+	"description":"Practice 1",
+	"scheduled":"2019-08-09T07:55:00+00:00",
+	"scheduled_end":"2019-08-09T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:435097",
+	"description":"Practice 2",
+"scheduled":"2019-08-09T12:05:00+00:00",
+"scheduled_end":"2019-08-09T12:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435099",
+	"description":"Practice 3",
+"scheduled":"2019-08-10T07:55:00+00:00",
+"scheduled_end":"2019-08-10T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435101",
+	"description":"Practice 4",
+"scheduled":"2019-08-10T11:30:00+00:00",
+"scheduled_end":"2019-08-10T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435103",
+	"description":"Qualifying",
+"scheduled":"2019-08-10T12:10:00+00:00",
+"scheduled_end":"2019-08-10T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:435105",
+	"description":"Q1",
+	"scheduled":"2019-08-10T12:10:00+00:00",
+	"scheduled_end":"2019-08-10T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:435107",
+	"description":"Q2",
+"scheduled":"2019-08-10T12:35:00+00:00",
+"scheduled_end":"2019-08-10T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:435109",
+	"description":"Race",
+"scheduled":"2019-08-11T12:00:00+00:00",
+"scheduled_end":"2019-08-11T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:435311",
+	"description":"British Grand Prix 2019",
+"scheduled":"2019-08-23T08:55:00+00:00",
+"scheduled_end":"2019-08-25T13:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:435313",
+	"description":"Practice 1",
+	"scheduled":"2019-08-23T08:55:00+00:00",
+	"scheduled_end":"2019-08-23T09:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:435315",
+	"description":"Practice 2",
+"scheduled":"2019-08-23T13:05:00+00:00",
+"scheduled_end":"2019-08-23T13:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435317",
+	"description":"Practice 3",
+"scheduled":"2019-08-24T08:55:00+00:00",
+"scheduled_end":"2019-08-24T09:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435319",
+	"description":"Practice 4",
+"scheduled":"2019-08-24T12:30:00+00:00",
+"scheduled_end":"2019-08-24T13:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435321",
+	"description":"Qualifying",
+"scheduled":"2019-08-24T13:10:00+00:00",
+"scheduled_end":"2019-08-24T13:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:435323",
+	"description":"Q1",
+	"scheduled":"2019-08-24T13:10:00+00:00",
+	"scheduled_end":"2019-08-24T13:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:435325",
+	"description":"Q2",
+"scheduled":"2019-08-24T13:35:00+00:00",
+"scheduled_end":"2019-08-24T13:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:435327",
+	"description":"Race",
+"scheduled":"2019-08-25T12:00:00+00:00",
+"scheduled_end":"2019-08-25T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:435529",
+	"description":"Gran Premio di San Marino e della Riviera di Rimini 2019",
+"scheduled":"2019-09-13T07:55:00+00:00",
+"scheduled_end":"2019-09-15T13:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:435531",
+	"description":"Practice 1",
+	"scheduled":"2019-09-13T07:55:00+00:00",
+	"scheduled_end":"2019-09-13T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:435533",
+	"description":"Practice 2",
+"scheduled":"2019-09-13T12:05:00+00:00",
+"scheduled_end":"2019-09-13T12:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435535",
+	"description":"Practice 3",
+"scheduled":"2019-09-14T07:55:00+00:00",
+"scheduled_end":"2019-09-14T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435537",
+	"description":"Practice 4",
+"scheduled":"2019-09-14T11:30:00+00:00",
+"scheduled_end":"2019-09-14T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435539",
+	"description":"Qualifying",
+"scheduled":"2019-09-14T12:10:00+00:00",
+"scheduled_end":"2019-09-14T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:435541",
+	"description":"Q1",
+	"scheduled":"2019-09-14T12:10:00+00:00",
+	"scheduled_end":"2019-09-14T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:435543",
+	"description":"Q2",
+"scheduled":"2019-09-14T12:35:00+00:00",
+"scheduled_end":"2019-09-14T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:435545",
+	"description":"Race",
+"scheduled":"2019-09-15T12:00:00+00:00",
+"scheduled_end":"2019-09-15T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:435747",
+	"description":"Gran Premio de Aragon 2019",
+"scheduled":"2019-09-20T07:55:00+00:00",
+"scheduled_end":"2019-09-22T13:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:435749",
+	"description":"Practice 1",
+	"scheduled":"2019-09-20T07:55:00+00:00",
+	"scheduled_end":"2019-09-20T08:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:435751",
+	"description":"Practice 2",
+"scheduled":"2019-09-20T12:05:00+00:00",
+"scheduled_end":"2019-09-20T12:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435753",
+	"description":"Practice 3",
+"scheduled":"2019-09-21T07:55:00+00:00",
+"scheduled_end":"2019-09-21T08:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435755",
+	"description":"Practice 4",
+"scheduled":"2019-09-21T11:30:00+00:00",
+"scheduled_end":"2019-09-21T12:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435757",
+	"description":"Qualifying",
+"scheduled":"2019-09-21T12:10:00+00:00",
+"scheduled_end":"2019-09-21T12:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:435759",
+	"description":"Q1",
+	"scheduled":"2019-09-21T12:10:00+00:00",
+	"scheduled_end":"2019-09-21T12:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:435761",
+	"description":"Q2",
+"scheduled":"2019-09-21T12:35:00+00:00",
+"scheduled_end":"2019-09-21T12:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:435763",
+	"description":"Race",
+"scheduled":"2019-09-22T12:00:00+00:00",
+"scheduled_end":"2019-09-22T13:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:435965",
+	"description":"Thailand Grand Prix 2019",
+"scheduled":"2019-10-04T02:55:00+00:00",
+"scheduled_end":"2019-10-06T08:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:435967",
+	"description":"Practice 1",
+	"scheduled":"2019-10-04T02:55:00+00:00",
+	"scheduled_end":"2019-10-04T03:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:435969",
+	"description":"Practice 2",
+"scheduled":"2019-10-04T07:05:00+00:00",
+"scheduled_end":"2019-10-04T07:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435971",
+	"description":"Practice 3",
+"scheduled":"2019-10-05T02:55:00+00:00",
+"scheduled_end":"2019-10-05T03:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435973",
+	"description":"Practice 4",
+"scheduled":"2019-10-05T06:30:00+00:00",
+"scheduled_end":"2019-10-05T07:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:435975",
+	"description":"Qualifying",
+"scheduled":"2019-10-05T07:10:00+00:00",
+"scheduled_end":"2019-10-05T07:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:435977",
+	"description":"Q1",
+	"scheduled":"2019-10-05T07:10:00+00:00",
+	"scheduled_end":"2019-10-05T07:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:435979",
+	"description":"Q2",
+"scheduled":"2019-10-05T07:35:00+00:00",
+"scheduled_end":"2019-10-05T07:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:435981",
+	"description":"Race",
+"scheduled":"2019-10-06T07:00:00+00:00",
+"scheduled_end":"2019-10-06T08:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:436183",
+	"description":"Grand Prix of Japan 2019",
+"scheduled":"2019-10-18T00:55:00+00:00",
+"scheduled_end":"2019-10-20T06:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:436185",
+	"description":"Practice 1",
+	"scheduled":"2019-10-18T00:55:00+00:00",
+	"scheduled_end":"2019-10-18T01:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:436187",
+	"description":"Practice 2",
+"scheduled":"2019-10-18T05:05:00+00:00",
+"scheduled_end":"2019-10-18T05:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:436189",
+	"description":"Practice 3",
+"scheduled":"2019-10-19T00:55:00+00:00",
+"scheduled_end":"2019-10-19T01:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:436191",
+	"description":"Practice 4",
+"scheduled":"2019-10-19T04:30:00+00:00",
+"scheduled_end":"2019-10-19T05:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:436193",
+	"description":"Qualifying",
+"scheduled":"2019-10-19T05:10:00+00:00",
+"scheduled_end":"2019-10-19T05:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:436195",
+	"description":"Q1",
+	"scheduled":"2019-10-19T05:10:00+00:00",
+	"scheduled_end":"2019-10-19T05:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:436197",
+	"description":"Q2",
+"scheduled":"2019-10-19T05:35:00+00:00",
+"scheduled_end":"2019-10-19T05:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:436199",
+	"description":"Race",
+"scheduled":"2019-10-20T05:00:00+00:00",
+"scheduled_end":"2019-10-20T06:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:436401",
+	"description":"Australian Grand Prix 2019",
+"scheduled":"2019-10-25T00:55:00+00:00",
+"scheduled_end":"2019-10-27T06:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:436403",
+	"description":"Practice 1",
+	"scheduled":"2019-10-25T00:55:00+00:00",
+	"scheduled_end":"2019-10-25T01:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:436405",
+	"description":"Practice 2",
+"scheduled":"2019-10-25T05:05:00+00:00",
+"scheduled_end":"2019-10-25T05:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:436407",
+	"description":"Practice 3",
+"scheduled":"2019-10-26T00:55:00+00:00",
+"scheduled_end":"2019-10-26T01:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:436409",
+	"description":"Practice 4",
+"scheduled":"2019-10-26T04:30:00+00:00",
+"scheduled_end":"2019-10-26T05:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:436411",
+	"description":"Qualifying",
+"scheduled":"2019-10-26T05:10:00+00:00",
+"scheduled_end":"2019-10-26T05:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:436413",
+	"description":"Q1",
+	"scheduled":"2019-10-26T05:10:00+00:00",
+	"scheduled_end":"2019-10-26T05:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:436415",
+	"description":"Q2",
+"scheduled":"2019-10-26T05:35:00+00:00",
+"scheduled_end":"2019-10-26T05:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:436417",
+	"description":"Race",
+"scheduled":"2019-10-27T05:00:00+00:00",
+"scheduled_end":"2019-10-27T06:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:436619",
+	"description":"Malaysian Motorcycle Grand Prix 2019",
+"scheduled":"2019-11-01T02:55:00+00:00",
+"scheduled_end":"2019-11-03T06:00:00+00:00",
+"type":"event",
+"stages":
+	[{
+	"id":"sr:stage:436621",
+	"description":"Practice 1",
+	"scheduled":"2019-11-01T02:55:00+00:00",
+	"scheduled_end":"2019-11-01T03:40:00+00:00",
+	"type":"practice"
+},
+{
+	"id":"sr:stage:436623",
+	"description":"Practice 2",
+"scheduled":"2019-11-01T07:05:00+00:00",
+"scheduled_end":"2019-11-01T07:50:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:436625",
+	"description":"Practice 3",
+"scheduled":"2019-11-02T02:55:00+00:00",
+"scheduled_end":"2019-11-02T03:40:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:436627",
+	"description":"Practice 4",
+"scheduled":"2019-11-02T06:30:00+00:00",
+"scheduled_end":"2019-11-02T07:00:00+00:00",
+"type":"practice"
+},
+{
+	"id":"sr:stage:436629",
+	"description":"Qualifying",
+"scheduled":"2019-11-02T07:10:00+00:00",
+"scheduled_end":"2019-11-02T07:50:00+00:00",
+"type":"qualifying",
+"stages":
+	[{
+	"id":"sr:stage:436631",
+	"description":"Q1",
+	"scheduled":"2019-11-02T07:10:00+00:00",
+	"scheduled_end":"2019-11-02T07:25:00+00:00",
+	"type":"qualifying_part"
+},
+{
+	"id":"sr:stage:436633",
+	"description":"Q2",
+"scheduled":"2019-11-02T07:35:00+00:00",
+"scheduled_end":"2019-11-02T07:50:00+00:00",
+"type":"qualifying_part"
+}]
+},
+{
+	"id":"sr:stage:436635",
+	"description":"Race",
+"scheduled":"2019-11-03T05:00:00+00:00",
+"scheduled_end":"2019-11-03T06:00:00+00:00",
+"type":"race"
+}]
+},
+{
+	"id":"sr:stage:436837",
+	"description":"Gran Premio de Valenciana 2019",
+	"scheduled":"2019-11-15T08:55:00+00:00",
+	"scheduled_end":"2019-11-17T14:00:00+00:00",
+	"type":"event",
+	"stages":
+	[{
+	"id":"sr:stage:436839",
+	"description":"Practice 1",
+	"scheduled":"2019-11-15T08:55:00+00:00",
+	"scheduled_end":"2019-11-15T09:40:00+00:00",
+	"type":"practice"
+	},
+	{
+	"id":"sr:stage:436841",
+	"description":"Practice 2",
+	"scheduled":"2019-11-15T13:05:00+00:00",
+	"scheduled_end":"2019-11-15T13:50:00+00:00",
+	"type":"practice"
+	},
+	{
+	"id":"sr:stage:436843",
+	"description":"Practice 3",
+	"scheduled":"2019-11-16T08:55:00+00:00",
+	"scheduled_end":"2019-11-16T09:40:00+00:00",
+	"type":"practice"
+	},
+	{
+	"id":"sr:stage:436845",
+	"description":"Practice 4",
+	"scheduled":"2019-11-16T12:30:00+00:00",
+	"scheduled_end":"2019-11-16T13:00:00+00:00",
+	"type":"practice"
+	},
+	{
+	"id":"sr:stage:436847",
+	"description":"Qualifying",
+	"scheduled":"2019-11-16T13:10:00+00:00",
+	"scheduled_end":"2019-11-16T13:50:00+00:00",
+	"type":"qualifying",
+	"stages":
+	[{
+	"id":"sr:stage:436849",
+	"description":"Q1",
+	"scheduled":"2019-11-16T13:10:00+00:00",
+	"scheduled_end":"2019-11-16T13:25:00+00:00",
+	"type":"qualifying_part"
+	},
+	{
+	"id":"sr:stage:436851",
+	"description":"Q2",
+	"scheduled":"2019-11-16T13:35:00+00:00",
+	"scheduled_end":"2019-11-16T13:50:00+00:00",
+	"type":"qualifying_part"
+	}
+]
+},
+{
+	"id":"sr:stage:436853",
+	"description":"Race",
+	"scheduled":"2019-11-17T13:00:00+00:00",
+	"scheduled_end":"2019-11-17T14:00:00+00:00",
+	"type":"race"
+}]
+}]
+}
