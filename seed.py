@@ -130,16 +130,19 @@ def load_results(results_json):
 	teams_list = stage['teams']
 	competitors_list = stage['competitors']
 
+
+
+
+
+
+
 	#To Do:
 	#Make Result Instances
 
-
-
-
-	#result = Result(competitor_id=competitor_id
-					 # venue_id=venue_id
-					 # etc=etc)
-					 #################### WORK ON THIS ###########################
+	# result = Result(competitor_id=competitor_id,
+	# 				 venue_id=venue_id,
+	# 				 etc=etc)
+	# 				 ################### WORK ON THIS ###########################
 	# print(result)
 
 	# db.session.add(result)

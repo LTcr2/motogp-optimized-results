@@ -1,6 +1,6 @@
 [{
     "id": "337641",
-    "city": "Qatar",
+    "city": "Lusail",
     "name": "Losail International Circuit",
     "country_code": "QAT",
     "description": "Grand Prix of Qatar 2018",
@@ -14,7 +14,7 @@
     "longitude": 51.452761
 }, {
     "id": "337859",
-    "city": "Termas de Río Hondo",
+    "city": "Santiago del Estero",
     "name":"Autódromo Termas de Río Hondo",
     "country_code": "ARG",
     "description": "Gran Premio de la Republica Argentina 2018",
@@ -42,8 +42,8 @@
     "longitude": -97.635848
 }, {
     "id": "338295",
-    "city": "Barcelona",
-    "name": "Circuito de Jerez",
+    "city": "Jerez de la Frontera",
+    "name": "Circuito de Jerez-Ángel Nieto",
     "country_code":"ESP",
     "description": "Gran Premio de Espana 2018",
     "scheduled": "2018-05-04T07:55:00+00:00",
@@ -56,8 +56,8 @@
     "longitude": -6.033868
 }, {
     "id": "338513",
-    "city": "Le Castellet",
-    "name": "Bugatti Circuit",
+    "city": "Le Mans",
+    "name": "Circuit Bugatti",
     "country_code": "FRA",
     "description": "Grand Prix de France 2018",
     "scheduled": "2018-05-18T07:55:00+00:00",
@@ -70,8 +70,8 @@
     "longitude": 0.207884
 }, {
     "id": "338731",
-    "city": "Monza",
-    "name": "Monza Eni Circuit",
+    "city": "Scarperia e San Piero",
+    "name": "Mugello Circuit",
     "country_code": "ITA",
     "description": "Gran Premio d'Italia 2018",
     "scheduled": "2018-06-01T07:55:00+00:00",
@@ -84,9 +84,9 @@
     "longitude": 9.284825
 }, {
     "id": "338949",
-    "city": "Barcelona-Catalunya",
+    "city": "Montmeló",
     "name": "Circuit de Barcelona-Catalunya",
-    "country_code": "ESP",
+    "country_code": "CAT",
     "description": "Circuit de Barcelona-Catalunya 2018",
     "scheduled": "2018-06-15T07:55:00+00:00",
     "scheduled_end": "2018-06-17T13:00:00+00:00",
@@ -100,7 +100,7 @@
     "id": "339167",
     "city": "Assen",
     "name": "TT Circuit Assen",
-    "country_code": "NLD",
+    "country_code": "NED",
     "description": "TT Assen 2018",
     "scheduled": "2018-06-29T07:55:00+00:00",
     "scheduled_end": "2018-07-01T13:00:00+00:00",
@@ -112,9 +112,9 @@
     "longitude": 6.522353
 }, {
     "id": "339385",
-    "city": "Oberlungwitz",
+    "city": "Hohenstein-Ernstthal",
     "name": "Sachsenring",
-    "country_code": "DEU",
+    "country_code": "GER",
     "description": "Motorrad Grand Prix Deutschland 2018",
     "scheduled": "2018-07-13T07:55:00+00:00",
     "scheduled_end": "2018-07-15T13:00:00+00:00",
@@ -170,7 +170,7 @@
     "id": "340257",
     "city": "Misano",
     "name": "Misano World Circuit Marco Simoncelli",
-    "country_code": "ITA",
+    "country_code": "RSM",
     "description": "Gran Premio di San Marino e della Riviera di Rimini 2018",
     "scheduled": "2018-09-07T07:55:00+00:00",
     "scheduled_end": "2018-09-09T13:00:00+00:00",
@@ -183,8 +183,8 @@
 }, {
     "id": "340475",
     "city": "Alcañiz",
-    "name": "Ciudad del Motor de Aragón",
-    "country_code": "ESP",
+    "name": "Motorland Aragón",
+    "country_code": "ARA",
     "description": "Gran Premio de Aragon 2018",
     "scheduled": "2018-09-21T07:55:00+00:00",
     "scheduled_end": "2018-09-23T13:00:00+00:00",
@@ -224,7 +224,7 @@
     "longitude": 140.225423
 }, {
     "id": "341129",
-    "city": "Ventnor",
+    "city": "Phillip Island",
     "name": "Phillip Island Grand Prix Circuit",
     "country_code": "AUS",
     "description": "Australian Grand Prix 2018",
@@ -238,9 +238,9 @@
     "longitude": 145.231605
 }, {
     "id": "341347",
-    "city": "Sepang",
+    "city": "Selangor",
     "name": "Sepang International Circuit",
-    "country_code": "MYS",
+    "country_code": "MAL",
     "description": "Malaysian Motorcycle Grand Prix 2018",
     "scheduled": "2018-11-02T02:55:00+00:00",
     "scheduled_end": "2018-11-04T06:00:00+00:00",
@@ -254,7 +254,7 @@
     "id": "341565",
     "city": "Valenciana",
     "name": "Circuit de la Comunitat Valenciana Ricardo Tormo",
-    "country_code": "ESP",
+    "country_code": "VAL",
     "description": "Gran Premio de Valenciana 2018",
     "scheduled": "2018-11-16T08:55:00+00:00",
     "scheduled_end": "2018-11-18T14:00:00+00:00",

@@ -579,9 +579,6 @@
     "gender": "male",
     "nationality": "Switzerland",
     "country_code": "CHE",
-    "team": {
-        "name": "None"
-    },
     "result": {
         "bike_number": 12,
         "position": 29,

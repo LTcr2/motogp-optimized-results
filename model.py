@@ -101,10 +101,11 @@ class Result(db.Model):
 	__tablename__ = "results"
 
 	#i might need this id to refer to a specific result..
-	#rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+	rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
 	fastest_lap_time = db.Column(db.String, nullable=False)
 	gap = db.Column(db.String, nullable=False)
-	position = db.Column(db.Integer, primary_key=True, nullable=False)
+	position = db.Column(db.Integer, nullable=False)
+
 	# grid = db.Column(db.Integer, nullable=False) #how to add P in front of position integer on grid
 	# laps = db.Column(db.Integer, nullable=True)
 	# podiums = db.Column(db.Integer, nullable=True)
@@ -131,8 +132,8 @@ class Result(db.Model):
 	def __repr__(self):
 		"""Define and display all the values of the result."""
 
-		return"<Result fastest_lap_time={} gap={} grid={} laps={} podiums={} points={} position={} vehicle_chassis={} status={} victories={} victory_pole_fastest_lap={}".format(
-			self.fastest_lap_time, self.gap, self.grid, self.laps, self.podiums, self.points, self.position, self.vehicle_chassis, self.status, self.victories, self.victory_pole_fastest_lap)
+		return"<Result id={} fastest_lap_time={} gap={} grid={} laps={} podiums={} points={} position={} vehicle_chassis={} status={} victories={} victory_pole_fastest_lap={}".format(
+			self.rating_id, self.fastest_lap_time, self.gap, self.grid, self.laps, self.podiums, self.points, self.position, self.vehicle_chassis, self.status, self.victories, self.victory_pole_fastest_lap)
 
 
 
