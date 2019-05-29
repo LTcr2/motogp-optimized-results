@@ -1,31 +1,53 @@
 <!doctype html>
 <html>
 <head>
-    <title>MotoGP Video Results</title>
+    <title>MotoGP Optimized Results</title>
 </head>
 
 <body>
-    MotoGP Video Results
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <span class="navbar-brand">MotoGP Optimized Results</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <p>
+          <a href="/competitors">2018 MotoGP Competitors</a><div>
+          <a href="/teams">2018 MotoGP Teams</a><div>
+          <a href="/venues">2018 MotoGP Stages</a><div>
+        </p>
+      </div>
+
+    </nav>
+
+
+
+
+    
     <hr> <!-- creates a horizontal line -->
 
-    <p>
-      <a href="/competitors">2018 MotoGP Competitors Roster</a><div>
-      <a href="/teams">2018 MotoGP Teams</a><div>
-      <a href="/venues">2018 MotoGP Stages</a><div>
-    </p>
 
-    <!--  Flash messages display here -->
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <ul class=flashes>
-        {% for message in messages %}
-          <li>{{ message }}</li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
+      <!--  Flash messages display here -->
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class=flashes>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
 
-    {% block content %} put yer content here {% endblock %}
+      {% block content %} put yer content here {% endblock %}
 
 </body>
+
+
+
+
+<div>
+  <a href="/about">About</a>
+</div>
 </html>

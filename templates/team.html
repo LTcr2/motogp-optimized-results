@@ -6,16 +6,21 @@
 
 
 	<h1>{{ team.name }}</h1>
+	<p>Country: {{ team.country_code }}</p>
+	<p>Final standing position: {{ team.position }}</p>
+	<p>Podiums: {{ team.podiums }}</p>
+	<p>Points: {{ team.points }}</p>
+	<p>Victories: {{ team.victories }}</p>
+	<p>Riders: {{ team.riders }}
 
 
-
-	<div class="row">
-			<img src="/static/marquez.jpg" align="left" height=400>
-
-
-		</div>
-
-	</div>
+	<ul>
+  		{% for venue in venues %}
+    		<li>
+      			<a href="/venues/{{ venue.venue_id }}">{{ venue.name }}</a>
+    		</li>
+  		{% endfor %}
+  	</ul>
 
 
 

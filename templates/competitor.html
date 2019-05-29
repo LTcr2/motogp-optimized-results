@@ -7,14 +7,15 @@
 
 	<h1>{{ competitor.name }}</h1>
 	<p>Team: {{ competitor.team }}</p>
+	<p>Country: {{ competitor.country_code }}</p>
 
-
-
-	<div class="row">
-			<img src="/static/marquez.jpg" align="left" height=400>
-
-
-		</div>
+	<ul>
+  		{% for venue in venues %}
+    		<li>
+      			<a href="/venues/{{ venue.venue_id }}">{{ venue.name }}</a>
+    		</li>
+  		{% endfor %}
+  	</ul>
 
 	</div>
 

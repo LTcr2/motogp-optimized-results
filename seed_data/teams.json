@@ -126,7 +126,7 @@
         "points_both_drivers": 3
     }
 }, {
-    "id": "22035",
+    "id": "58959",
     "name": "LCR Honda MotoGP",
     "gender": "male",
     "nationality": "Monaco",
@@ -222,4 +222,17 @@
         "races": 18,
         "races_with_points": 9
     }
-}]
+}, {
+    "id": "N/A",
+    "name": "None",
+    "gender": "None",
+    "nationality": "N/A",
+    "country_code": "N/A",
+    "result": {
+        "points": 0,
+        "position": 0,
+        "races": 0,
+        "races_with_points": 0
+    }
+}
+]

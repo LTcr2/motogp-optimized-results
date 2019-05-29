@@ -68,7 +68,7 @@ class Team(db.Model):
 
 	__tablename__ = "teams"
 
-	team_id = db.Column(db.Integer, primary_key=True)
+	team_id = db.Column(db.String(25), primary_key=True)
 	name = db.Column(db.String(100), nullable=False)
 	country_code = db.Column(db.String(3), nullable=False)
 
@@ -102,11 +102,11 @@ class Result(db.Model):
 
 	#i might need this id to refer to a specific result..
 	rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-	fastest_lap_time = db.Column(db.String, nullable=False)
-	gap = db.Column(db.String, nullable=False)
-	position = db.Column(db.Integer, nullable=False)
+	position = db.Column(db.String, nullable=False)
 
 	# grid = db.Column(db.Integer, nullable=False) #how to add P in front of position integer on grid
+	# fastest_lap_time = db.Column(db.String, nullable=False)
+	# gap = db.Column(db.String, nullable=False)
 	# laps = db.Column(db.Integer, nullable=True)
 	# podiums = db.Column(db.Integer, nullable=True)
 	# points = db.Column(db.Integer, nullable=True)
@@ -119,21 +119,28 @@ class Result(db.Model):
 
 	venue_id = db.Column(db.Integer,
 						 db.ForeignKey('venues.venue_id'))
-	competitor_id = db.Column(db.Integer,
-							  db.ForeignKey('competitors.competitor_id'))
 	venue = db.relationship("Venue",
 							backref=db.backref("results",
 												order_by=position))
+	competitor_id = db.Column(db.Integer,
+							  db.ForeignKey('competitors.competitor_id'))
 	competitor = db.relationship("Competitor", 
 									backref=db.backref("results",
 														order_by=position))
+	team_id = db.Column(db.String,
+						db.ForeignKey('teams.team_id'))
+	team = db.relationship("Team",
+							backref=db.backref("results",
+												order_by=position))
+
+
 
 
 	def __repr__(self):
 		"""Define and display all the values of the result."""
 
-		return"<Result id={} fastest_lap_time={} gap={} grid={} laps={} podiums={} points={} position={} vehicle_chassis={} status={} victories={} victory_pole_fastest_lap={}".format(
-			self.rating_id, self.fastest_lap_time, self.gap, self.grid, self.laps, self.podiums, self.points, self.position, self.vehicle_chassis, self.status, self.victories, self.victory_pole_fastest_lap)
+		return"<Result id={} venueid={} competitor_id={} position={}".format(
+			self.rating_id, self.venue_id, self.competitor_id, self.position)
 
 
 

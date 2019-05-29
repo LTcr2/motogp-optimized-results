@@ -69,7 +69,20 @@ def competitor_detail(competitor_id):
 	"""Show info about specific rider"""
 
 	competitor = Competitor.query.get(competitor_id)
-	return render_template('/competitor.html', competitor=competitor)
+	venues = Venue.query.all()
+
+	return render_template('/competitor.html', 
+							competitor=competitor, 
+							venues=venues)
+
+# @app.route("/competitors/<int:competitor_id>/<int:venue_id>")
+# def final_route_detail(competitor_id, venue_id):
+
+# 	competitor = Competitor.query.get(competitor_id)
+# 	venue = Venue.query.get(venue_id)
+
+# 	return render_template('/video+map.html',
+# 							competitor=competitor)
 
 
 #################### TEAMS PAGES ################################
@@ -81,12 +94,16 @@ def teams_list():
 	teams = Team.query.all()
 	return render_template('/teams.html', teams=teams)
 
-@app.route("/teams/<int:team_id>", methods=['GET'])
+@app.route("/teams/<team_id>", methods=['GET'])
 def team_detail(team_id):
 	"""Show info about a specific team"""
 
 	team = Team.query.get(team_id)
-	return render_template('/team.html', team=team)
+	venues = Venue.query.all()
+
+	return render_template('/team.html', team=team, team_id=team_id, venues=venues)
+
+
 
 
 #################### VENUES PAGES ###############################
@@ -108,6 +125,7 @@ def venue_detail(venue_id):
 	return render_template('/venue.html', venue=venue)
 
 
+###################### TEST AJAX
 
 
 

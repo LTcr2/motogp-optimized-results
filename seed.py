@@ -18,6 +18,9 @@ def load_competitors(riders_json):
 	3. add riders into the database
 	"""
 
+	# import pdb; pdb.set_trace()
+
+
 	json_open = open(riders_json).read()
 	py_dict = json.loads(json_open)
 	for rider in py_dict:
@@ -46,7 +49,6 @@ def load_competitors(riders_json):
 		db.session.add(competitor)
 	db.session.commit()
 
-	# import pdb; pdb.set_trace()
 
 
 def load_teams(teams_json):
@@ -112,51 +114,56 @@ def load_venues(venues_json):
 
 	# import pdb; pdb.set_trace()
 
-def load_results(results_json):
-	"""load results summary into database"""
+# def load_results(results_json):
+# 	#in py_dict, there is only one key
+# 	#this is 'stage'
+# 	stage = py_dict['stage']
+# 	#in stage, there are these keys
+# 	#'id', 'description', 'scheduled', 'scheduled_end', 'type', 'parents', 'stages', 'competitors', 'teams'
+# 	#STRINGS = id, description, scheduled, scheduled_end, type
+# 	#VALUES = sr:stage:337639, MotoGP 2018, 2018-03-16T11:55:00+00:00, 2018-11-18T14:00:00+00:00, season
+# 	#LIST = Parents = [{'id': 'sr:stage:8306', 'description': 'MotoGP', 'type': 'sport'}]
+# 	stages_list = stage['stages']
+# 	teams_list = stage['teams']
+# 	competitors_list = stage['competitors']
 
-	# import pdb; pdb.set_trace()
+# 	"""load results summary into database"""
 
-	py_dict = json.loads(open(results_json).read())
-	#in py_dict, there is only one key
-	#this is 'stage'
-	stage = py_dict['stage']
-	#in stage, there are these keys
-	#'id', 'description', 'scheduled', 'scheduled_end', 'type', 'parents', 'stages', 'competitors', 'teams'
-	#STRINGS = id, description, scheduled, scheduled_end, type
-	#VALUES = sr:stage:337639, MotoGP 2018, 2018-03-16T11:55:00+00:00, 2018-11-18T14:00:00+00:00, season
-	#LIST = Parents = [{'id': 'sr:stage:8306', 'description': 'MotoGP', 'type': 'sport'}]
-	stages_list = stage['stages']
-	teams_list = stage['teams']
-	competitors_list = stage['competitors']
+# 	# import pdb; pdb.set_trace()
 
-
-
-
-
-
-
-	#To Do:
-	#Make Result Instances
-
-	# result = Result(competitor_id=competitor_id,
-	# 				 venue_id=venue_id,
-	# 				 etc=etc)
-	# 				 ################### WORK ON THIS ###########################
-	# print(result)
-
-	# db.session.add(result)
-	# db.session.commit()
-
-
-
-	return(py_dict)
+	# return(py_dict)
 
 	# for item in py_dict:
 	# 	stage = py_dict['stage']
 	# 	venues = stage['stages']
 	# 	competitors = stage['competitors']
 	# 	teams = stage['teams']
+
+
+
+def load_results(results_json):
+
+	print("Results")
+
+
+	for i, row in enumerate(open(results_json)):
+		row = row.rstrip()
+		venue_id, competitor_id, team_id, position = row.split("|")
+
+
+		result = Result(venue_id=venue_id,
+						competitor_id=competitor_id,
+						team_id=team_id,
+						position=position)
+
+
+
+		db.session.add(result)
+		print(result)
+
+	db.session.commit()
+
+# import pdb; pdb.set_trace()
 
 
 
@@ -167,7 +174,7 @@ if __name__ == "__main__":
 	riders_json = "seed_data/riders.json"
 	teams_json = "seed_data/teams.json"
 	venues_json = "seed_data/venues.json"
-	results_json = "seed_data/results.json"
+	results_json = "seed_data/DATAUNLABELLED.json"
 	load_competitors(riders_json)
 	load_teams(teams_json)
 	load_venues(venues_json)
