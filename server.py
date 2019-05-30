@@ -72,10 +72,15 @@ def competitor_list():
 def competitor_detail(competitor_id):
 	"""Show info about specific rider"""
 
+	#some sql alchemy here doing some querying
 	competitor = Competitor.query.get(competitor_id)
-	venues = Venue.query.all()
 	teams = Team.query.all()
 	results = Result.query.filter_by(competitor_id=competitor_id)
+
+	#SELECT venue_id FROM results WHERE position != N/A
+
+	#select all results in which competitor_id = competitor_id and has a position (not N/A)
+	venues = db.session.query(Competitor.competitor_id, Competitor.name)
 
 	return render_template('/competitor.html', 
 							competitor=competitor,

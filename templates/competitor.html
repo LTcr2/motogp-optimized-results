@@ -27,8 +27,8 @@
   	<div>
   	Venues {{ competitor.name }} competed at:
   	<ul>
-  		{% for result in results %}
-  			{{ result }}
+  		{% for name in competitor.name %}
+  			{{ name }}
   		{% endfor %}
   	</ul>
   	</div>

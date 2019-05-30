@@ -31,6 +31,8 @@ class Competitor(db.Model):
 	# debut = db.Column(db.Date, nullable=False)
 	# gender = db.Column(db.String(10), nullable=False)
 	vehicle_number = db.Column(db.Integer, nullable=False)
+
+	#creating this column based on the team that already exists from team table
 	team_id = db.Column(db.String(25), db.ForeignKey('teams.team_id'), nullable=True)
 	team = db.relationship('Team', backref='competitors')
 
@@ -110,18 +112,17 @@ class Result(db.Model):
 	# victories = db.Column(db.Integer, nullable=False)
 	# victory_pole_fastest_lap = db.Column(db.Integer, nullable=False)
 
-	#create a variable that is based on the value that exists in the venue
+	
 
-	venue_id = db.Column(db.Integer,
-						 db.ForeignKey('venues.venue_id'))
-	venue = db.relationship("Venue",
-							backref=db.backref("results",
-												order_by=position))
-	competitor_id = db.Column(db.Integer,
-							  db.ForeignKey('competitors.competitor_id'))
-	competitor = db.relationship("Competitor", 
-									backref=db.backref("results",
-														order_by=position))
+	#create a variable that is based on the value that exists in the venue
+	venue_id = db.Column(db.Integer, db.ForeignKey('venues.venue_id'), nullable=False)
+	venue = db.relationship('Venue', backref='results', order_by=position)
+
+	#create a competitor_id by grabbing from the competitor object
+	competitor_id = db.Column(db.Integer, db.ForeignKey('competitors.competitor_id'))
+	competitor = db.relationship("Competitor", backref="results", order_by=position)
+
+	#create a team object based on team object from Team table
 	team_id = db.Column(db.String(25),
 						db.ForeignKey('teams.team_id'))
 	team = db.relationship("Team",
