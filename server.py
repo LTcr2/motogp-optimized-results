@@ -164,18 +164,14 @@ def show_results():
     competitor = request.form.get("competitor_name")
     venue = request.form.get("venue_name")
 
-    # if competitor == 'Marquez, Marc':
-    #     result_code = 'ERROR'
-    #     result_text = "You can't get results about Marc Marquez, we don't like him."
-    # elif competitor == 'Rossi, Valentino':
-    #     result_code = 'OK'
-    #     result_text = "This is {}'s result from from {}".format(melon, venue)
-    # else:
-    #     result_code = 'ERROR'
-    #     result_text = "I don't have any results from this rider. He must've crashed! :P"
+    if competitor == 'Marquez, Marc':
+    	result_query = Result.query.filter_by(competitor_id=21999)
+    	result = result_query(position)
+
+
 
     result_code = 'OK'
-    result_text = "You've chosen {}'s results at {}.".format(competitor, venue)
+    result_text = "You've chosen {}'s results at {}. His finished in {} position".format(competitor, venue, results)
 
     return jsonify({'code': result_code, 'msg': result_text})
 
