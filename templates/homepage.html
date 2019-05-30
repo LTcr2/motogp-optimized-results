@@ -4,15 +4,52 @@
 
 {% block content %}
 
-	<div class="row">
 
 
-			
+	<h2>Results Search Form</h2>
 
+	<form id="results-form">
+	    <div class="form-group">
+	      <label>Competitor Name
+	        <select id="competitor_name_field" name="competitor_name" class="form-control">
+	        	{% for competitor in competitors %}
+	        		<li>
+	        			<option>{{ competitor.name }}</option>
+	        		</li>
+	        	{% endfor %}
+	        </select>
+	      </label>
+	    </div>
 
-		</div>
+	    <div class="form-group">
+	    	<label>Venue Name
+	    		<select id="venue_name_field" name="venue_name" class="form-control">
+	    			{% for venue in venues %}
+	    				<li>
+	    					<option>{{ venue.description }}</option>
+	    				</li>
+	    			{% endfor %}
+	    		</select>
+	    	</label>
+	    </div>
+
+	    <div class="form-group">
+	      <button type="submit" id="order-form-button" class="btn btn-primary">Search</button>
+	    </div>
+
+	</form>
+
+	<div id="rider-results"></div>
 
 	</div>
+
+</div>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="/static/ajax-exercise.js"></script>
+
+</body>
+</html>
 
 
 

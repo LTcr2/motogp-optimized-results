@@ -5,10 +5,18 @@
 {% block content %}
 
 
-	<h1>{{ competitor.name }}</h1>
-	<p>Team: {{ competitor.team }}</p>
-	<p>Country: {{ competitor.country_code }}</p>
+	<h2>{{ competitor.name }}</h2>
+	<div>Country: {{ competitor.country_code }}</div>
+	<div>Team: 
+		<a href="/teams/{{ competitor.team.team_id }}">{{ competitor.team.name }}</a>
+	</div>
+	<div>Teammate:
+		<a href="/competitors/{{ competitor.team.competitors[1].competitor_id }}">{{ competitor.team.competitors[1].name }}</a>
+	</div>
 
+
+	<div>
+	Venues:
 	<ul>
   		{% for venue in venues %}
     		<li>

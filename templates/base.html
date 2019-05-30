@@ -1,32 +1,28 @@
 <!doctype html>
 <html>
 <head>
-    <title>MotoGP Optimized Results</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/ajax-exercise.css">
+
 </head>
 
 <body>
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <span class="navbar-brand">MotoGP Optimized Results</span>
+          <a href="/">2018 MotoGP Optimized Results</a>
+          <a href="/competitors">Competitors</a>   
+          <a href="/teams">Teams</a>   
+          <a href="/venues">Stages</a>  
+          <a href="/about">About</a> 
         </div>
-      </div>
-
-      <div class="container">
-        <p>
-          <a href="/competitors">2018 MotoGP Competitors</a><div>
-          <a href="/teams">2018 MotoGP Teams</a><div>
-          <a href="/venues">2018 MotoGP Stages</a><div>
-        </p>
       </div>
 
     </nav>
 
 
-
-
-    
-    <hr> <!-- creates a horizontal line -->
 
 
       <!--  Flash messages display here -->
@@ -42,12 +38,13 @@
 
       {% block content %} put yer content here {% endblock %}
 
+
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="/static/ajax-on-homepage.js"></script>
+
 </body>
 
 
 
-
-<div>
-  <a href="/about">About</a>
-</div>
 </html>

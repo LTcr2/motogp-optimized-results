@@ -5,23 +5,32 @@
 {% block content %}
 
 
-	<h1>{{ team.name }}</h1>
-	<p>Country: {{ team.country_code }}</p>
-	<p>Final standing position: {{ team.position }}</p>
-	<p>Podiums: {{ team.podiums }}</p>
-	<p>Points: {{ team.points }}</p>
-	<p>Victories: {{ team.victories }}</p>
-	<p>Riders: {{ team.riders }}
+	<h2>{{ team.name }}</h2>
+	<p>
+		<div> Country: {{ team.country_code }}</div>
+		<div> Final standing position: {{ team.position }}</div>
+		<div> Podiums: {{ team.podiums }}</div>
+		<div> Points: {{ team.points }}</div>
+		<div> Victories: {{ team.victories }}</div>
+		<div> Riders: 
+			{% for competitor in team.competitors %}
+				<li>
+					<a href="/competitors/{{ competitor.competitor_id }}">{{ competitor.vehicle_number }} - {{ competitor.name }}</a>
+				</li>
+			{% endfor %}
+		</div>
 
 
-	<ul>
-  		{% for venue in venues %}
-    		<li>
-      			<a href="/venues/{{ venue.venue_id }}">{{ venue.name }}</a>
-    		</li>
-  		{% endfor %}
-  	</ul>
 
+	<p>Venues:
+		<ul>
+	  		{% for venue in venues %}
+	    		<li>
+	      			<a href="/venues/{{ venue.venue_id }}">{{ venue.name }}</a>
+	    		</li>
+	  		{% endfor %}
+	  	</ul>
+	 </p>
 
 
 {% endblock %}

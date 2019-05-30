@@ -45,7 +45,11 @@ def homepage():
 	"""Show homepage and all results"""
 
 	results = Result.query.all()
-	return render_template("/homepage.html")
+	competitors = Competitor.query.all()
+	venues = Venue.query.all()
+	return render_template("/homepage.html", 
+							competitors=competitors,
+							venues=venues)
 
 # import pdb; pdb.set_trace()
 
@@ -70,9 +74,11 @@ def competitor_detail(competitor_id):
 
 	competitor = Competitor.query.get(competitor_id)
 	venues = Venue.query.all()
+	teams = Team.query.all()
 
 	return render_template('/competitor.html', 
-							competitor=competitor, 
+							competitor=competitor,
+							teams=teams, 
 							venues=venues)
 
 # @app.route("/competitors/<int:competitor_id>/<int:venue_id>")
@@ -125,10 +131,46 @@ def venue_detail(venue_id):
 	return render_template('/venue.html', venue=venue)
 
 
-###################### TEST AJAX
+###################### TEST AJAX #################################
+@app.route('/order-list.json', methods=['POST'])
+def order_list():
+	"""Show list of venues that rider has participated at"""
+
+	rider = request.form.get('rider_name')
+
+	if rider == 'marquez':
+		venues = Result.query.filter_by(competitor_id =21999)
+		result_code = venues
+		result_text = 'Here is the list of venues in which Marquez raced at'
+	else:
+		result_code = 'ERROR'
+		result_text = 'Sorry, I didn\'t watch those races'
+
+	return jsonify(venues, {'code': result_code, 'msg': result_text})
 
 
 
+@app.route('/rider_results.json', methods=['POST'])
+def show_results():
+    """Order melons and return a dictionary of result-code and result-msg."""
+
+    competitor = request.form.get("competitor_name")
+    venue = request.form.get("venue_name")
+
+    # if competitor == 'Marquez, Marc':
+    #     result_code = 'ERROR'
+    #     result_text = "You can't get results about Marc Marquez, we don't like him."
+    # elif competitor == 'Rossi, Valentino':
+    #     result_code = 'OK'
+    #     result_text = "This is {}'s result from from {}".format(melon, venue)
+    # else:
+    #     result_code = 'ERROR'
+    #     result_text = "I don't have any results from this rider. He must've crashed! :P"
+
+    result_code = 'OK'
+    result_text = "You've chosen {}'s results at {}.".format(competitor, venue)
+
+    return jsonify({'code': result_code, 'msg': result_text})
 
 
 
@@ -148,30 +190,29 @@ if __name__ == "__main__":
 	connect_to_db(app)
 
 	# DebugToolbarExtension(app)
-
-app.run(host="0.0.0.0")
-
+	app.run(host="0.0.0.0")
 
 
-# if __name__ == '__main__':
-# 	connect_to_db(app)
 
-# 	manager = APIManager(app, flask_sqlalchemy_db=db)
+# <h2>Request Details about Specific Rider</h2>
+	
+# 	<form id="rider-form">
+# 		<div class="form-group">
+# 			<label>Rider Name
+# 				<select id="rider-name-field" name="rider_name" class="form-control">
+# 					<option>marquez</option>
+# 					<option>rossi</option>
+# 				</select>
+# 			</label>
+# 		</div>
 
-# 	# Create API endpoints, which will be available at /api/<tablename> by default. Allowed HTTP methods can be specified as well.
+# 		<div class="form-group">
+# 			<button type="submit" id="rider-name-button" class="btn btn-primary">List Details</button>
+# 		</div>
 
-# 	manager.create_api(
-# 		Competitor,
-# 		methods = ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'])
+# 		<div id="venue-list"></div>
 
-# 	manager.create_api(
-# 		Team,
-# 		methods = ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'])
 
-# 	manager.create_api(
-# 		Result,
-# 		methods = ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'])
 
-# 	manager.create_api(
-# 		Venue,
-# 		methods = ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'])
+# <script src="http://code.jquery.com/jquery.js"></script>
+# <script src="/static/ajax-exercise.js"></script>

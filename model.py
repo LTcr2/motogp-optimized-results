@@ -31,6 +31,8 @@ class Competitor(db.Model):
 	# debut = db.Column(db.Date, nullable=False)
 	# gender = db.Column(db.String(10), nullable=False)
 	vehicle_number = db.Column(db.Integer, nullable=False)
+	team_id = db.Column(db.String(25), db.ForeignKey('teams.team_id'), nullable=True)
+	team = db.relationship('Team', backref='competitors')
 
 	"""
 	- connect to results and Team
@@ -38,9 +40,6 @@ class Competitor(db.Model):
 	- can use attributes results and team, not a field in the table but a "magic attribute"
 	- returns objects or list of objects
 	"""
-
-	# result = db.relationship('Result'), db.ForeignKey('competitor_id')
-	team = db.Column(db.String, nullable=True)
 
 	"""
 	alternative relationship syntax: backref
@@ -78,12 +77,6 @@ class Team(db.Model):
 	victories = db.Column(db.Integer, nullable=True)
 	# vehicle_chassis = db.Column(db.String(50), nullable=False)
 	# foundation_year = db.Column(db.Date, nullable=False)
-	# competitor = db.relationship('Competitor')
-
-	#### probably don't need these ####
-	# location = db.Column(db.String(70), nullable=False)
-	# official_website = db.Column(db.String(100), nullable=True)
-	
 
 
 
@@ -127,7 +120,7 @@ class Result(db.Model):
 	competitor = db.relationship("Competitor", 
 									backref=db.backref("results",
 														order_by=position))
-	team_id = db.Column(db.String,
+	team_id = db.Column(db.String(25),
 						db.ForeignKey('teams.team_id'))
 	team = db.relationship("Team",
 							backref=db.backref("results",

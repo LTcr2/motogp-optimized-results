@@ -31,20 +31,14 @@ def load_competitors(riders_json):
 		country_code = rider['country_code']
 		result = rider['result']
 		bike_number = result['bike_number']
-		team = rider['team']
-		team_name = team['name']
+		team_name = rider['team']['name']
+		team = Team.query.filter_by(name=team_name).first()
 		competitor = Competitor(competitor_id=competitor_id, 
-							name=name, 
-							vehicle_number=bike_number, 
-							team=team_name,
-							country_code=country_code)
+								name=name, 
+								vehicle_number=bike_number, 
+								team=team,
+								country_code=country_code)
 		print(competitor)
-		# else:
-		# 	competitor = Competitor(competitor_id=competitor_id, 
-		# 							name=name, 
-		# 							vehicle_number=bike_number,
-		# 							team=None,
-		# 							country_code=country_code)
 
 		db.session.add(competitor)
 	db.session.commit()
@@ -175,8 +169,8 @@ if __name__ == "__main__":
 	teams_json = "seed_data/teams.json"
 	venues_json = "seed_data/venues.json"
 	results_json = "seed_data/DATAUNLABELLED.json"
-	load_competitors(riders_json)
 	load_teams(teams_json)
+	load_competitors(riders_json)
 	load_venues(venues_json)
 	load_results(results_json)
 
