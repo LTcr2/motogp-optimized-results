@@ -34,6 +34,8 @@ class Competitor(db.Model):
 	team_id = db.Column(db.String(25), db.ForeignKey('teams.team_id'), nullable=True)
 	team = db.relationship('Team', backref='competitors')
 
+
+
 	"""
 	- connect to results and Team
 	- establishes SQLAlchemy relationship between tables
@@ -94,7 +96,7 @@ class Result(db.Model):
 	__tablename__ = "results"
 
 	#i might need this id to refer to a specific result..
-	rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+	result_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
 	position = db.Column(db.String, nullable=False)
 
 	# grid = db.Column(db.Integer, nullable=False) #how to add P in front of position integer on grid
@@ -133,7 +135,7 @@ class Result(db.Model):
 		"""Define and display all the values of the result."""
 
 		return"<Result id={} venueid={} competitor_id={} position={}".format(
-			self.rating_id, self.venue_id, self.competitor_id, self.position)
+			self.result_id, self.venue_id, self.competitor_id, self.position)
 
 
 

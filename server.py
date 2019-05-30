@@ -75,11 +75,13 @@ def competitor_detail(competitor_id):
 	competitor = Competitor.query.get(competitor_id)
 	venues = Venue.query.all()
 	teams = Team.query.all()
+	results = Result.query.filter_by(competitor_id=competitor_id)
 
 	return render_template('/competitor.html', 
 							competitor=competitor,
 							teams=teams, 
-							venues=venues)
+							venues=venues,
+							results=results)
 
 # @app.route("/competitors/<int:competitor_id>/<int:venue_id>")
 # def final_route_detail(competitor_id, venue_id):

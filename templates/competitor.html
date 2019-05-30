@@ -17,13 +17,24 @@
 
 	<div>
 	Venues:
-	<ul>
   		{% for venue in venues %}
     		<li>
       			<a href="/venues/{{ venue.venue_id }}">{{ venue.name }}</a>
     		</li>
   		{% endfor %}
+
+
+  	<div>
+  	Venues {{ competitor.name }} competed at:
+  	<ul>
+  		{% for result in results %}
+  			{{ result }}
+  		{% endfor %}
   	</ul>
+  	</div>
+
+
+  	</div>
 
 	</div>
 
