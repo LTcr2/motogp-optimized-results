@@ -18,7 +18,7 @@ function showResults(evt) {
 
     let formInputs = {
         "competitor_name": $("#competitor_name_field").val(),
-        "venue_name": $("#venue_name_field").val()
+        "venue_description": $("#venue_name_field").val()
     };
 
     $.post("/rider_results.json", formInputs, updateResults);

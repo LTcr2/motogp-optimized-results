@@ -7,31 +7,26 @@
 
 	<h2>{{ competitor.name }}</h2>
 	<div>Country: {{ competitor.country_code }}</div>
+	<div>Gender: {{ competitor.gender }}</div>
+	<div>Bike: {{ competitor.bike }}</div>
 	<div>Team: 
 		<a href="/teams/{{ competitor.team.team_id }}">{{ competitor.team.name }}</a>
 	</div>
-	<div>Teammate:
-		<a href="/competitors/{{ competitor.team.competitors[1].competitor_id }}">{{ competitor.team.competitors[1].name }}</a>
-	</div>
 
 
+
+
+
+	<div>Stages with results for this rider:
+		<ul>
+			{% for venue in venues %}
+			<li>
+				<a href="/venues/{{venue.venue_id}}">{{ venue.description }}
+			</li>
+			{% endfor %}
+		<ul>
 	<div>
-	Venues:
-  		{% for venue in venues %}
-    		<li>
-      			<a href="/venues/{{ venue.venue_id }}">{{ venue.name }}</a>
-    		</li>
-  		{% endfor %}
-
-
-  	<div>
-  	Venues {{ competitor.name }} competed at:
-  	<ul>
-  		{% for name in competitor.name %}
-  			{{ name }}
-  		{% endfor %}
-  	</ul>
-  	</div>
+	
 
 
   	</div>

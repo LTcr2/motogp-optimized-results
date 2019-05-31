@@ -4,6 +4,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"Honda",
     "team": {
         "id": "22037",
         "name": "Repsol Honda Team",
@@ -29,6 +30,7 @@
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
+    "bike":"Ducati",
     "team": {
         "id": "4567",
         "name": "Mission Winnow Ducati",
@@ -53,6 +55,7 @@
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
+    "bike":"Yamaha",
     "team": {
         "id": "38777",
         "name": "Monster Energy Yamaha Motogp",
@@ -75,6 +78,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"Yamaha",
     "team": {
         "id": "38777",
         "name": "Monster Energy Yamaha Motogp",
@@ -99,6 +103,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"Suzuki",
     "team": {
         "id": "191644",
         "name": "Team Suzuki Ecstar",
@@ -121,6 +126,7 @@
     "gender": "male",
     "nationality": "France",
     "country_code": "FRA",
+    "bike":"Yamaha",
     "team": {
         "id": "299024",
         "name": "Red Bull KTM Factory Racing",
@@ -143,6 +149,7 @@
     "gender": "male",
     "nationality": "Great Britain",
     "country_code": "GBR",
+    "bike":"Honda",
     "team": {
         "id": "58959",
         "name": "Lcr Honda Castrol",
@@ -166,6 +173,7 @@
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
+    "bike":"Ducati",
     "team": {
         "id": "4567",
         "name": "Mission Winnow Ducati",
@@ -188,6 +196,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"Ducati",
     "team": {
         "id": "22037",
         "name": "Repsol Honda Team",
@@ -213,6 +222,7 @@
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
+    "bike":"Suzuki",
     "team": {
         "id": "91680",
         "name": "Aprilia Racing Team Gresini",
@@ -234,6 +244,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"Honda",
     "team": {
         "id": "22037",
         "name": "Repsol Honda Team",
@@ -254,6 +265,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"Ducati",
     "team": {
         "name": "None"
     },
@@ -270,6 +282,7 @@
     "gender": "male",
     "nationality": "Australia",
     "country_code": "AUS",
+    "bike":"Ducati",
     "team": {
         "id": "22039",
         "name": "Alma Pramac Racing",
@@ -291,6 +304,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"KTM",
     "team": {
         "id": "299024",
         "name": "Red Bull KTM Factory Racing",
@@ -312,6 +326,7 @@
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
+    "bike":"Honda",
     "team": {
         "name": "None"
     },
@@ -328,6 +343,7 @@
     "gender": "male",
     "nationality": "Malaysia",
     "country_code": "MYS",
+    "bike":"Yamaha",
     "team": {
         "name": "None"
     },
@@ -344,6 +360,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"Aprilia",
     "team": {
         "id": "91680",
         "name": "Aprilia Racing Team Gresini",
@@ -364,6 +381,7 @@
     "gender": "male",
     "nationality": "Great Britain",
     "country_code": "GBR",
+    "bike":"KTM",
     "team": {
         "id": "299024",
         "name": "Red Bull KTM Factory Racing",
@@ -384,6 +402,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"Ducati",
     "team": {
         "id": "65686",
         "name": "Reale Avintia Racing",
@@ -404,6 +423,7 @@
     "gender": "male",
     "nationality": "Japan",
     "country_code": "JPN",
+    "bike":"Honda",
     "team": {
         "id": "58959",
         "name": "Lcr Honda Castrol",
@@ -424,6 +444,7 @@
     "gender": "male",
     "nationality": "Great Britain",
     "country_code": "GBR",
+    "bike":"Aprilia",
     "team": {
         "id": "91680",
         "name": "Aprilia Racing Team Gresini",
@@ -444,6 +465,7 @@
     "gender": "male",
     "nationality": "Italy",
     "country_code": "ITA",
+    "bike":"Ducati",
     "team": {
         "id": "4567",
         "name": "Mission Winnow Ducati",
@@ -464,6 +486,7 @@
     "gender": "male",
     "nationality": "Czech Republic",
     "country_code": "CZE",
+    "bike":"Ducati",
     "team": {
         "id": "65686",
         "name": "Reale Avintia Racing",
@@ -484,6 +507,7 @@
     "gender": "male",
     "nationality": "Germany",
     "country_code": "DEU",
+    "bike":"Honda",
     "team": {
         "name": "None"
     },
@@ -500,6 +524,7 @@
     "gender": "male",
     "nationality": "Finland",
     "country_code": "FIN",
+    "bike":"KTM",
     "team": {
         "id": "299024",
         "name": "Red Bull KTM Factory Racing",
@@ -520,6 +545,7 @@
     "gender": "male",
     "nationality": "Japan",
     "country_code": "JPN",
+    "bike":"Yamaha",
     "team": {
         "name": "None"
     },
@@ -536,6 +562,7 @@
     "gender": "male",
     "nationality": "Belgium",
     "country_code": "BEL",
+    "bike":"Ducati",
     "team": {
         "id": "65686",
         "name": "Reale Avintia Racing",
@@ -556,6 +583,7 @@
     "gender": "male",
     "nationality": "Spain",
     "country_code": "ESP",
+    "bike":"Ducati",
     "team": {
         "name": "None"
     },
@@ -579,6 +607,7 @@
     "gender": "male",
     "nationality": "Switzerland",
     "country_code": "CHE",
+    "bike":"Honda",
     "team" : {
         "name": "None"
     },
@@ -593,6 +622,7 @@
     "gender": "male",
     "nationality": "Australia",
     "country_code": "AUS",
+    "bike":"Ducati",
     "team": {
         "id": "65686",
         "name": "Reale Avintia Racing",
@@ -611,6 +641,7 @@
     "gender": "male",
     "nationality": "France",
     "country_code": "FRA",
+    "bike":"Suzuki",
     "team": {
         "id": "191644",
         "name": "Team Suzuki Ecstar",
@@ -629,6 +660,7 @@
     "gender": "male",
     "nationality": "Netherlands",
     "country_code": "NLD",
+    "bike":"Ducati",
     "team": {
         "id": "65686",
         "name": "Reale Avintia Racing",

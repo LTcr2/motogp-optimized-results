@@ -28,6 +28,7 @@ def load_competitors(riders_json):
 		competitor_id = rider['id']
 		name = rider['name']
 		gender = rider['gender']
+		bike = rider['bike']
 		country_code = rider['country_code']
 		result = rider['result']
 		bike_number = result['bike_number']
@@ -35,8 +36,10 @@ def load_competitors(riders_json):
 		team = Team.query.filter_by(name=team_name).first()
 		competitor = Competitor(competitor_id=competitor_id, 
 								name=name, 
+								bike=bike,
 								vehicle_number=bike_number, 
 								team=team,
+								gender=gender,
 								country_code=country_code)
 		print(competitor)
 

@@ -26,11 +26,12 @@ class Competitor(db.Model):
 	competitor_id = db.Column(db.Integer, primary_key=True, nullable=False)
 	name = db.Column(db.String(50),nullable=False)
 	country_code = db.Column(db.String(3), nullable=False)
-	# nationality = db.Column(db.String(3), nullable=False)
+	# nationality = db.Column(db.String(25), nullable=False)
 	# official_website = db.Column(db.String(100), nullable=True)
 	# debut = db.Column(db.Date, nullable=False)
-	# gender = db.Column(db.String(10), nullable=False)
+	gender = db.Column(db.String(10), nullable=False)
 	vehicle_number = db.Column(db.Integer, nullable=False)
+	bike = db.Column(db.String(15), nullable=False)
 
 	#creating this column based on the team that already exists from team table
 	team_id = db.Column(db.String(25), db.ForeignKey('teams.team_id'), nullable=True)
@@ -61,8 +62,8 @@ class Competitor(db.Model):
 	def __repr__(self):
 		""" Returns representation of class information"""
 
-		return "<Competitor id={} name={} nationality={} vehicle_number={} team={}".format(
-			self.competitor_id, self.name, self.country_code, self.vehicle_number, self.team)
+		return "<Competitor id={} name={} gender={} nationality={} vehicle_number={} team={}".format(
+			self.competitor_id, self.name, self.gender, self.country_code, self.vehicle_number, self.team)
 
 
 

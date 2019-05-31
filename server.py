@@ -74,17 +74,47 @@ def competitor_detail(competitor_id):
 
 	#some sql alchemy here doing some querying
 	competitor = Competitor.query.get(competitor_id)
-	teams = Team.query.all()
+
+
+	# team_id = Team.query.filter_by(competitor_id=competitor_id)
 	results = Result.query.filter_by(competitor_id=competitor_id)
+
+	"""
+	<div>Teammates:
+		{% for competitor in team.competitors %}
+			<a href="/competitors/{{ competitor.competitor_id }}">{{ competitor.name }}</a>
+		{% endfor %}
+	</div>
+	"""
 
 	#SELECT venue_id FROM results WHERE position != N/A
 
 	#select all results in which competitor_id = competitor_id and has a position (not N/A)
-	venues = db.session.query(Competitor.competitor_id, Competitor.name)
+	results = Result.query.filter_by(competitor_id=competitor_id).all()
+
+	venue_ids = []
+	for result in results:
+		venue_ids.append(result.venue_id)
+
+	#now venue_ids have a list of all the venues in which this competitor has results for
+
+
+	venues = []
+	for venue_id in venue_ids:
+		venue_object = Venue.query.filter_by(venue_id=venue_id).first()
+		venues.append(venue_object)
+
+
+
+	# venue_id = result.venue_id
+
+
+
+	# venues = Venue.query.filter_by(venue_id=venue_id).all()
+
 
 	return render_template('/competitor.html', 
-							competitor=competitor,
-							teams=teams, 
+							competitor=competitor, 
 							venues=venues,
 							results=results)
 
@@ -112,9 +142,21 @@ def team_detail(team_id):
 	"""Show info about a specific team"""
 
 	team = Team.query.get(team_id)
+
+
+	#venues that the team participated at
+
+	#grab the team id
+	#grab results that have that team_id
+	#grab all the venue_id's with those results
+	#grab venue objects names with the venue_ids
+
+
 	venues = Venue.query.all()
 
-	return render_template('/team.html', team=team, team_id=team_id, venues=venues)
+	return render_template('/team.html', team=team, 
+										 team_id=team_id, 
+										 venues=venues)
 
 
 
@@ -161,17 +203,75 @@ def order_list():
 def show_results():
     """Order melons and return a dictionary of result-code and result-msg."""
 
-    competitor = request.form.get("competitor_name")
-    venue = request.form.get("venue_name")
+    #getting the selected rider and venue from the form on the page
+    select_competitor = request.form.get("competitor_name")
+    select_venue = request.form.get("venue_description")
+    # select_hello = request.form.get("testing")
 
-    if competitor == 'Marquez, Marc':
-    	result_query = Result.query.filter_by(competitor_id=21999)
-    	result = result_query(position)
+    #COOL TOOL!
+    print(request.values.to_dict())
+    # print(select_hello)
+    print(select_competitor)
+    print(select_venue)
+
+    #query the results using the selected competitor name and venue name selected
+    	#first find the competitor_id with the competitor's name
+    	#or just get that as the entry? maybe refactor later
+
+    #find the object of both competitor and venue based on the name we got from the form
+    competitor_object = Competitor.query.filter_by(name=select_competitor).first()
+    venue_object = Venue.query.filter_by(description=select_venue).first()
+
+    #first the ID of both competitor_object and venue_id
+    competitor_id = competitor_object.competitor_id
+    venue_id = venue_object.venue_id
+
+    competitor_name = competitor_object.name
 
 
+    #find the results of that competitor at that venue
+    select_result = Result.query.filter_by(competitor_id=competitor_id, venue_id=venue_id).first()
 
-    result_code = 'OK'
-    result_text = "You've chosen {}'s results at {}. His finished in {} position".format(competitor, venue, results)
+    #get the position the rider ended with
+    position = select_result.position
+
+    #if the rider earned a position as an integer, print P(number)
+
+    #else if position is DNS, print Did Not Start
+
+    #DNS
+    #did not start
+
+    #WD
+    #withdrew
+
+    #C
+    #race cancelled
+
+    #N/A
+    #Rider did not participate in race
+
+    #R
+    #retired
+
+    if position == 'C':
+    	result_text = "Race was cancelled due to weather conditions."
+    	result_code = 'OK'
+    elif position == 'DNS':
+    	result_text = "Rider did not start(DNS)."
+    	result_code = 'OK'
+    elif position == 'N/A':
+    	result_text = "Rider did not participate in at this stage."
+    	result_code = 'OK'
+    elif position == 'WD':
+    	result_text = "Rider withdrew."
+    	result_code = 'OK'
+    elif position == 'R':
+    	result_text = "Rider was retired."
+    	result_code = 'OK'
+    else:
+	    result_text = "You've chosen {}'s results at {}. Rider finished in {} position.".format(select_competitor, select_venue, position)
+	    result_code = 'OK'
 
     return jsonify({'code': result_code, 'msg': result_text})
 
@@ -179,6 +279,10 @@ def show_results():
 
 
 
+@app.route('/about')
+def show_about():
+
+	return render_template('about.html')
 
 
 
@@ -188,7 +292,7 @@ def show_results():
 
 if __name__ == "__main__":
 
-	# app.debug = True
+	app.debug = True
 
 	connect_to_db(app)
 
