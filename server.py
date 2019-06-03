@@ -28,7 +28,6 @@ url = "http://api.sportradar.us/motogp/trial/v2/en/competitors/sr:competitor:219
 headers = {'Authorization': 'Bearer' + your_api_key}
 # response = requests.get(url)
 # data = response.json()
-# print(data['schema'])
 
 
 
@@ -37,6 +36,40 @@ Endpoint format:
 
 https://api.sportradar.us/motogp/{access_level}/{version}/{language_code}/competitors/{competitor_id}/profile.{return_format}?api_key={your_api_key}
 """
+
+@app.route('/test')
+def get_youtube_video():
+		###################### THIS IS TRYING TO GET A VIDEO BASED ON FORM OPTIONS SELECTED ####################################
+	#returns a response object
+	r = requests.get("https://www.googleapis.com/youtube/v3/search?q=")
+
+	#we'll use the response.json method to decode our json
+	r.json()
+	# print(r)
+	#<Response [400], Response [200]
+
+	developer_key = 'AIzaSyB-zKkfLXp_xVgmsNPO7QF41uEQ0Dl2x6Y'
+	array_list = []
+	format_keywords = "build this keyword using the rider and venue name"
+	order = request.form.get("sort_by")
+	select_competitor = request.form.get("competitor_name")
+	select_venue = request.form.get("venue_description")
+
+	#url being created based on the form entries by user
+
+	url = "https://www.googleapis.com/youtube/v3/search?q="format_keywords"&order="order"&part=snippet&type=video&maxResults="maxResults"&key="developer_key
+
+	#get the list of videos based on url search parameters
+	# array_list = get_youtube_list(url)
+
+
+	results = Result.query.all()
+	competitors = Competitor.query.all()
+	venues = Venue.query.all()
+
+	return render_template("/test.html",
+							competitors=competitors,
+							venues=venues)
 
 
 
@@ -105,24 +138,10 @@ def competitor_detail(competitor_id):
 		venues.append(venue_object)
 
 
-
-	# venue_id = result.venue_id
-
-
-
-	# venues = Venue.query.filter_by(venue_id=venue_id).all()
-
-
 	return render_template('/competitor.html', 
 							competitor=competitor, 
 							venues=venues,
 							results=results)
-
-# @app.route("/competitors/<int:competitor_id>/<int:venue_id>")
-# def final_route_detail(competitor_id, venue_id):
-
-# 	competitor = Competitor.query.get(competitor_id)
-# 	venue = Venue.query.get(venue_id)
 
 # 	return render_template('/video+map.html',
 # 							competitor=competitor)
@@ -177,6 +196,9 @@ def venue_detail(venue_id):
 	"""Show details about a specific venue"""
 
 	venue = Venue.query.get(venue_id)
+	lat = venue.latitude
+	lon = venue.longitude
+
 	return render_template('/venue.html', venue=venue)
 
 
@@ -237,23 +259,6 @@ def show_results():
 
     #if the rider earned a position as an integer, print P(number)
 
-    #else if position is DNS, print Did Not Start
-
-    #DNS
-    #did not start
-
-    #WD
-    #withdrew
-
-    #C
-    #race cancelled
-
-    #N/A
-    #Rider did not participate in race
-
-    #R
-    #retired
-
     if position == 'C':
     	result_text = "Race was cancelled due to weather conditions."
     	result_code = 'OK'
@@ -283,6 +288,8 @@ def show_results():
 def show_about():
 
 	return render_template('about.html')
+
+
 
 
 
