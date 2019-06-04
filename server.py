@@ -13,7 +13,7 @@ from sqlalchemy import func
 
 #using api lab "balloonicorn's party" from hackbright as example
 
-#MY UNIQUE QUERY PARAMETERS
+######################## SPORT RADAR API INITIALIZATION #################
 app = Flask(__name__)
 
 app.secret_key = "NOTSUREYETBUTOKAY"
@@ -29,48 +29,14 @@ headers = {'Authorization': 'Bearer' + your_api_key}
 # response = requests.get(url)
 # data = response.json()
 
-
-
 """
 Endpoint format:
 
 https://api.sportradar.us/motogp/{access_level}/{version}/{language_code}/competitors/{competitor_id}/profile.{return_format}?api_key={your_api_key}
 """
 
-@app.route('/test')
-def get_youtube_video():
-		###################### THIS IS TRYING TO GET A VIDEO BASED ON FORM OPTIONS SELECTED ####################################
-	#returns a response object
-	r = requests.get("https://www.googleapis.com/youtube/v3/search?q=")
 
-	#we'll use the response.json method to decode our json
-	r.json()
-	# print(r)
-	#<Response [400], Response [200]
-
-	developer_key = 'AIzaSyB-zKkfLXp_xVgmsNPO7QF41uEQ0Dl2x6Y'
-	array_list = []
-	format_keywords = "build this keyword using the rider and venue name"
-	order = request.form.get("sort_by")
-	select_competitor = request.form.get("competitor_name")
-	select_venue = request.form.get("venue_description")
-
-	#url being created based on the form entries by user
-
-	url = "https://www.googleapis.com/youtube/v3/search?q="format_keywords"&order="order"&part=snippet&type=video&maxResults="maxResults"&key="developer_key
-
-	#get the list of videos based on url search parameters
-	# array_list = get_youtube_list(url)
-
-
-	results = Result.query.all()
-	competitors = Competitor.query.all()
-	venues = Venue.query.all()
-
-	return render_template("/test.html",
-							competitors=competitors,
-							venues=venues)
-
+######################## YOUTUBE API INITIALIZATION ####################
 
 
 @app.route("/")
@@ -85,6 +51,106 @@ def homepage():
 							venues=venues)
 
 # import pdb; pdb.set_trace()
+
+
+
+###################### AJAX #################################
+
+@app.route('/rider_results.json', methods=['POST'])
+def show_results():
+    """Order melons and return a dictionary of result-code and result-msg."""
+
+    #getting the selected rider and venue from the form on the page
+    select_competitor = request.form.get("competitor_name")
+    select_venue = request.form.get("venue_description")
+
+    #COOL TOOL!
+    print(request.values.to_dict())
+    # print(select_competitor)
+    # print(select_venue)
+
+    #query the results using the selected competitor name and venue name selected
+    	#first find the competitor_id with the competitor's name
+    	#or just get that as the entry? maybe refactor later
+
+    #find the object of both competitor and venue based on the name we got from the form
+    competitor_object = Competitor.query.filter_by(name=select_competitor).first()
+    venue_object = Venue.query.filter_by(description=select_venue).first()
+
+    #first the ID of both competitor_object and venue_id
+    competitor_id = competitor_object.competitor_id
+    venue_id = venue_object.venue_id
+
+    competitor_name = competitor_object.name
+
+
+    #find the results of that competitor at that venue
+    select_result = Result.query.filter_by(competitor_id=competitor_id, venue_id=venue_id).first()
+
+    #get the position the rider ended with
+    position = select_result.position
+
+    #if the rider earned a position as an integer, print P(number)
+
+    if position == 'C':
+    	result_text = "Race was cancelled due to weather conditions."
+    	result_code = 'OK'
+    elif position == 'DNS':
+    	result_text = "Rider did not start(DNS)."
+    	result_code = 'OK'
+    elif position == 'N/A':
+    	result_text = "Rider did not participate in at this stage."
+    	result_code = 'OK'
+    elif position == 'WD':
+    	result_text = "Rider withdrew."
+    	result_code = 'OK'
+    elif position == 'R':
+    	result_text = "Rider was retired."
+    	result_code = 'OK'
+    else:
+	    result_text = "You've chosen {}'s results at {}. Rider finished in {} position.".format(select_competitor, select_venue, position)
+	    result_code = 'OK'
+
+    return jsonify({'code': result_code, 'msg': result_text})
+
+
+@app.route('/youtube_results.json', methods=['POST'])
+def show_youtube():
+
+    select_competitor = request.form.get("competitor_name")
+    select_venue = request.form.get("venue_description")
+    select_order = request.form.get("sort_by")
+    select_numresults = request.form.get("num_results")
+
+    print(request.values.to_dict())
+
+
+    format_keyword = select_competitor+" "+select_venue
+    developer_key = 'AIzaSyB-zKkfLXp_xVgmsNPO7QF41uEQ0Dl2x6Y'
+
+
+    url = "https://www.googleapis.com/youtube/v3/search?q=${}&order={}&part=snippet&type=video&maxResults={}&key={}".format(format_keyworkd,select_order, select_numresults, developer_key)
+
+
+
+    example = "https://www.googleapis.com/youtube/v3/channels?key=[YOUR_API_KEY] HTTP/1.1"
+
+
+    response = request.get(url)
+    print(response+ "hellloooooooooo")
+    data = response.json()
+
+    #get json back
+    #index into
+    #pick videos out
+    #save those
+    #return those
+
+
+    return jsonify({'code': result_code, 'msg': result_text})
+
+
+    
 
 
 ################### COMPETITORS PAGES ###########################
@@ -201,88 +267,7 @@ def venue_detail(venue_id):
 
 	return render_template('/venue.html', venue=venue)
 
-
-###################### TEST AJAX #################################
-@app.route('/order-list.json', methods=['POST'])
-def order_list():
-	"""Show list of venues that rider has participated at"""
-
-	rider = request.form.get('rider_name')
-
-	if rider == 'marquez':
-		venues = Result.query.filter_by(competitor_id =21999)
-		result_code = venues
-		result_text = 'Here is the list of venues in which Marquez raced at'
-	else:
-		result_code = 'ERROR'
-		result_text = 'Sorry, I didn\'t watch those races'
-
-	return jsonify(venues, {'code': result_code, 'msg': result_text})
-
-
-
-@app.route('/rider_results.json', methods=['POST'])
-def show_results():
-    """Order melons and return a dictionary of result-code and result-msg."""
-
-    #getting the selected rider and venue from the form on the page
-    select_competitor = request.form.get("competitor_name")
-    select_venue = request.form.get("venue_description")
-    # select_hello = request.form.get("testing")
-
-    #COOL TOOL!
-    print(request.values.to_dict())
-    # print(select_hello)
-    print(select_competitor)
-    print(select_venue)
-
-    #query the results using the selected competitor name and venue name selected
-    	#first find the competitor_id with the competitor's name
-    	#or just get that as the entry? maybe refactor later
-
-    #find the object of both competitor and venue based on the name we got from the form
-    competitor_object = Competitor.query.filter_by(name=select_competitor).first()
-    venue_object = Venue.query.filter_by(description=select_venue).first()
-
-    #first the ID of both competitor_object and venue_id
-    competitor_id = competitor_object.competitor_id
-    venue_id = venue_object.venue_id
-
-    competitor_name = competitor_object.name
-
-
-    #find the results of that competitor at that venue
-    select_result = Result.query.filter_by(competitor_id=competitor_id, venue_id=venue_id).first()
-
-    #get the position the rider ended with
-    position = select_result.position
-
-    #if the rider earned a position as an integer, print P(number)
-
-    if position == 'C':
-    	result_text = "Race was cancelled due to weather conditions."
-    	result_code = 'OK'
-    elif position == 'DNS':
-    	result_text = "Rider did not start(DNS)."
-    	result_code = 'OK'
-    elif position == 'N/A':
-    	result_text = "Rider did not participate in at this stage."
-    	result_code = 'OK'
-    elif position == 'WD':
-    	result_text = "Rider withdrew."
-    	result_code = 'OK'
-    elif position == 'R':
-    	result_text = "Rider was retired."
-    	result_code = 'OK'
-    else:
-	    result_text = "You've chosen {}'s results at {}. Rider finished in {} position.".format(select_competitor, select_venue, position)
-	    result_code = 'OK'
-
-    return jsonify({'code': result_code, 'msg': result_text})
-
-
-
-
+################### ABOUT #######################################
 
 @app.route('/about')
 def show_about():

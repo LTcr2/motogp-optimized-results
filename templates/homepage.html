@@ -30,13 +30,10 @@
 	    		</select>
 	    	</label>
 
-	    	<label>Enter Keywords for Youtube:
-	    		<input type="text" name="keywords" placeholder="rossi valencia">
-	    	</label>
 
 	    	<div>
 		    	<label>Number of Results:
-		    		<select id="num_results" name="num_results_returned" class="form-control">
+		    		<select id="num_results_field" name="num_results" class="form-control">
 		    			<option> 1 </option>
 		    			<option> 2 </option>
 		    			<option> 3 </option>
@@ -49,24 +46,15 @@
 		    			<option> 10 </option>
 		    		</select>
 		    	</label>
-	    	</div>
-
-
-
-
-
-
-	    	<div>
-	    	<label>Sort by:
-        		<select name="order" required>
-		            <option> Relevance </option>
-		            <option> Date </option>
-		            <option> Rating </option>
-		            <option> Title </option>
-        		</select>
-        	</label>
-	    </div>
-
+		    	<label>Sort by:
+	        		<select id="sort_by_field" name="sort_by" class="form-control"required>
+			            <option> Relevance </option>
+			            <option> Date </option>
+			            <option> Rating </option>
+			            <option> Title </option>
+	        		</select>
+	        	</label>
+	        </div>
 
 	    <div class="form-group">
 	      <button type="submit" id="order-form-button" class="btn btn-primary">Search</button>
