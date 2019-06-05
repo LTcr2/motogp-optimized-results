@@ -46,6 +46,16 @@ def homepage():
 	results = Result.query.all()
 	competitors = Competitor.query.all()
 	venues = Venue.query.all()
+
+	#pseudocode
+	#do a youtube search with the form keywords and limitations
+	#get json response
+	#pick out the video_id from json responses
+	#store video_id
+	#pass video_id to the homepage.html
+
+
+
 	return render_template("/homepage.html", 
 							competitors=competitors,
 							venues=venues)
@@ -116,29 +126,40 @@ def show_results():
 
 @app.route('/youtube_results.json', methods=['POST'])
 def show_youtube():
-
+    
     select_competitor = request.form.get("competitor_name")
     select_venue = request.form.get("venue_description")
-    select_order = request.form.get("sort_by")
+    # select_order = request.form.get("sort_by")
     select_numresults = request.form.get("num_results")
+    # print(request.values.to_dict())
 
-    print(request.values.to_dict())
 
-
-    format_keyword = select_competitor+" "+select_venue
+    # format_keyword = select_competitor+" "+select_venue
     developer_key = 'AIzaSyB-zKkfLXp_xVgmsNPO7QF41uEQ0Dl2x6Y'
 
-
-    url = "https://www.googleapis.com/youtube/v3/search?q=${}&order={}&part=snippet&type=video&maxResults={}&key={}".format(format_keyworkd,select_order, select_numresults, developer_key)
-
-
-
-    example = "https://www.googleapis.com/youtube/v3/channels?key=[YOUR_API_KEY] HTTP/1.1"
+    
+    # hardcode_example = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=valentino%20rossi&key="+developer_key
 
 
-    response = request.get(url)
-    print(response+ "hellloooooooooo")
+    # response = requests.get(hardcode_example)
+
+
+
+    formatted_keywords = select_competitor
+
+    url = "https://www.googleapis.com/youtube/v3/search"
+
+    payload = {'part': 'snippet',
+    		   'maxResults': select_numresults,
+    		   'q': formatted_keywords,
+    		   'key':'AIzaSyB-zKkfLXp_xVgmsNPO7QF41uEQ0Dl2x6Y'}
+
+
+    response = requests.get(url, params=payload)
+
     data = response.json()
+
+    #return videoid should be ndlBdd9SlVc
 
     #get json back
     #index into
@@ -147,10 +168,10 @@ def show_youtube():
     #return those
 
 
-    return jsonify({'code': result_code, 'msg': result_text})
+    return jsonify(data)
 
 
-    
+
 
 
 ################### COMPETITORS PAGES ###########################
