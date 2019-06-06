@@ -124,28 +124,26 @@ def show_results():
     return jsonify({'code': result_code, 'msg': result_text})
 
 
+
+
+
 @app.route('/youtube_results.json', methods=['POST'])
 def show_youtube():
     
     select_competitor = request.form.get("competitor_name")
     select_venue = request.form.get("venue_description")
-    # select_order = request.form.get("sort_by")
+    select_order = request.form.get("sort_by")
     select_numresults = request.form.get("num_results")
-    # print(request.values.to_dict())
+    print(request.values.to_dict())
 
 
-    # format_keyword = select_competitor+" "+select_venue
     developer_key = 'AIzaSyB-zKkfLXp_xVgmsNPO7QF41uEQ0Dl2x6Y'
 
     
     # hardcode_example = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=valentino%20rossi&key="+developer_key
 
 
-    # response = requests.get(hardcode_example)
-
-
-
-    formatted_keywords = select_competitor
+    formatted_keywords = select_competitor + select_venue
 
     url = "https://www.googleapis.com/youtube/v3/search"
 
@@ -159,18 +157,10 @@ def show_youtube():
 
     data = response.json()
 
-    #return videoid should be ndlBdd9SlVc
-
-    #get json back
-    #index into
-    #pick videos out
-    #save those
-    #return those
+    print(data)
 
 
     return jsonify(data)
-
-
 
 
 
@@ -230,10 +220,6 @@ def competitor_detail(competitor_id):
 							venues=venues,
 							results=results)
 
-# 	return render_template('/video+map.html',
-# 							competitor=competitor)
-
-
 #################### TEAMS PAGES ################################
 
 @app.route("/teams", methods=['GET'])
@@ -248,24 +234,11 @@ def team_detail(team_id):
 	"""Show info about a specific team"""
 
 	team = Team.query.get(team_id)
-
-
-	#venues that the team participated at
-
-	#grab the team id
-	#grab results that have that team_id
-	#grab all the venue_id's with those results
-	#grab venue objects names with the venue_ids
-
-
 	venues = Venue.query.all()
 
 	return render_template('/team.html', team=team, 
 										 team_id=team_id, 
 										 venues=venues)
-
-
-
 
 #################### VENUES PAGES ###############################
 
@@ -282,9 +255,18 @@ def venue_list():
 def venue_detail(venue_id):
 	"""Show details about a specific venue"""
 
+	developer_key = 'AIzaSyBLAgXE42atlvCmAIJopHRVLe08v9MyAaM'
+
+	cota = "https://www.google.com/maps/embed/v1/view?zoom=15&center=30.1385%2C-97.6353&key=AIzaSyBLAgXE42atlvCmAIJopHRVLe08v9MyAaM"
+
 	venue = Venue.query.get(venue_id)
 	lat = venue.latitude
 	lon = venue.longitude
+
+	payload = {'developer_key': developer_key,
+			 'longitude': venue.longitude,
+			 'latitude': venue.latitude}
+
 
 	return render_template('/venue.html', venue=venue)
 

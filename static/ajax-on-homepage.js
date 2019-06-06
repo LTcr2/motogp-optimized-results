@@ -13,45 +13,39 @@ function updateResults(results) {
     }
 }
 
+function createYoutubeVideoWith(results) {
+
+    let videoId = results.items[0].id.videoId
+    let youtubeUrl = "https://www.youtube.com/embed/" + videoId
+
+    // $('#youtube-results').html("<p>" + results + "</p>");
+
+    //This SHOULD work when your daily limit is reset.
+    $('#youtube-results').html("<iframe src=" + youtubeUrl + "width=\"560\" height=\"315\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><iframe>");  
+}
+
+
 function showResults(evt) {
     evt.preventDefault();
 
     let formInputs = {
         "competitor_name": $("#competitor_name_field").val(),
-        "venue_description": $("#venue_name_field").val()
+        "venue_description": $("#venue_name_field").val(),
     };
 
+    let YTformInputs = {
+        "competitor_name": $("#competitor_name_field").val(),
+        "venue_description": $("#venue_name_field").val(),
+        "num_results": $("#num_results_field").val(),
+        "sort_by": $("#sort_by_field").val()
+    }
+
     $.post("/rider_results.json", formInputs, updateResults);
+    $.post("/youtube_results.json", YTformInputs, createYoutubeVideoWith)
 }
 
 $("#results-form").on('submit', showResults);
 
-
-
-
-
-function createYoutubeVideoWith(results) {
-    let testVideo = "https://www.youtube.com/embed/FOtNawOL4Vc?start=134"
-
-    let videoId = results.items[0].id.videoId
-    let youtubeUrl = "https://www.youtube.com/embed/" + results.items[0].id.videoId
-    let target = 'target="video"'
-
-    $('#youtube-results').html("<a target=\"video\" href=" + youtubeUrl + ">VIDEO");
-   
-}
-
-function showYoutubeResults(evt) {
-    console.log('I HAVE BEEN CALLED')
-    evt.preventDefault();
-
-    let YTformInputs = {
-        "competitor_name": $("#competitor_name_field").val()
-    }
-    $.post("/youtube_results.json", YTformInputs, createYoutubeVideoWith)
-}
-
-$("#video-form").on('submit', showYoutubeResults)
 
 
 

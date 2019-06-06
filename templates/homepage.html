@@ -30,87 +30,44 @@
 	    		</select>
 	    	</label>
 
-	    <div class="form-group">
-	      <button type="submit" id="order-form-button" class="btn btn-primary" >Search</button>
-	    </div>
-
-	</form>
-
-	<div id="rider-results"></div>
-
-
-
-	<h1> Video Results Search Form </h1>
-
-
-	<form id="video-form">
-		<div class="form-group">
-	      <label>Competitor Name
-	        <select id="competitor_name_field" name="competitor_name" class="form-control">
-	        	{% for competitor in competitors %}
-	        		<li>
-	        			<option>{{ competitor.name }}</option>
-	        		</li>
-	        	{% endfor %}
-	        </select>
-	      </label>
-
-	      <label>Venue Name
-	    		<select id="venue_name_field" name="venue_description" class="form-control">
-	    			{% for venue in venues %}
-	    				<li>
-	    					<option>{{ venue.description }}</option>
-	    				</li>
-	    			{% endfor %}
+		<div>
+	    	<label>Number of Results:
+	    		<select id="num_results_field" name="num_results" class="form-control">
+	    			<option> 1 </option>
+	    			<option> 2 </option>
+	    			<option> 3 </option>
 	    		</select>
 	    	</label>
+	    	<label>Sort by:
+        		<select id="sort_by_field" name="sort_by" class="form-control"required>
+		            <option> Relevance </option>
+		            <option> Date </option>
+		            <option> Rating </option>
+		            <option> Title </option>
+        		</select>
+        	</label>
+        </div>
 
+        <div class="form-group">
+	      	<button id="order-form-button" class="btn btn-primary" >Search</button>
+	    </div>
 
-	    	<div>
-		    	<label>Number of Results:
-		    		<select id="num_results_field" name="num_results" class="form-control">
-		    			<option> 1 </option>
-		    		</select>
-		    	</label>
-		    	<label>Sort by:
-	        		<select id="sort_by_field" name="sort_by" class="form-control"required>
-			            <option> Relevance </option>
-			            <option> Date </option>
-			            <option> Rating </option>
-			            <option> Title </option>
-	        		</select>
-	        	</label>
-	        </div>
+		<div id="rider-results"></div>
 
-	    
-	      <button type="submit" id="video-form" class="form-control" >Show Video Result</button>
+		<div id ="youtube-results"></div>
+
 	</form>
 
 
 
-
-	</div>
-	<div id ="youtube-results">
-	</div>
-
-
-
-	<div id="video">
-		<iframe src="" width="560" height="315" src="" frameborder="0"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div>
+		<a href="https://www.youtube.com/embed/DWyE0HVMF4g" target="test-video">Marc Marquez, Grand Prix of Qatar 2018</a>
 	</div>
 
-
-
-
-	<a href="https://www.youtube.com/embed/FOtNawOL4Vc?start=134" target="test-video">Test Honda Grom Video
-
-	<iframe name="test-video" src="" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+	<div>
+		<iframe name="test-video" src="" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
 </div>
-
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="/static/ajax-on-homepage.js"></script>
 
 </body>
 </html>

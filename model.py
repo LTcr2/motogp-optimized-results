@@ -150,7 +150,6 @@ class Venue(db.Model):
 	venue_id = db.Column(db.Integer, primary_key=True, nullable=False)
 	city = db.Column(db.String(50), nullable=False)
 	name = db.Column(db.String(100), nullable=True)
-	# country = db.Column(db.String(50), nullable=False)
 	country_code = db.Column(db.String(3), nullable=False)
 	description = db.Column(db.String(150), nullable=False)
 	status = db.Column(db.String(20), nullable=False)
@@ -161,12 +160,13 @@ class Venue(db.Model):
 	turns = db.Column(db.Integer, nullable=False)
 	latitude = db.Column(db.Float, nullable=False)
 	longitude = db.Column(db.Float, nullable=False)
+	maplink = db.Column(db.String(200), nullable=False)
 
 
 	def __repr__(self):
 		"""Define and display Venue class information"""
 
-		return f"<Venue id={self.venue_id} city={self.city} name={self.city} country={self.country_code} description={self.description} status={self.status} length={self.length} turns={self.turns} latitude={self.latitude} longitude={self.longitude}> "
+		return f"<Venue id={self.venue_id} city={self.city} name={self.city} country={self.country_code} description={self.description} status={self.status} length={self.length} turns={self.turns} latitude={self.latitude} longitude={self.longitude} maplink = {self.maplink}>"
 
 
 

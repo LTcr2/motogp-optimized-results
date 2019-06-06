@@ -11,7 +11,8 @@
     "turns": 16,
     "length": 5.380,
     "latitude": 25.486073,
-    "longitude": 51.452761
+    "longitude": 51.452761,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=14&center=25.4907%2C51.4538"
 }, {
     "id": "337859",
     "city": "Santiago del Estero",
@@ -25,7 +26,8 @@
     "turns": 14,
     "length": 4.81,
     "latitude": -27.511855,
-    "longitude": -64.917736
+    "longitude": -64.917736,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=17&center=-27.5124%2C-64.9177"
 }, {
     "id": "338077",
     "city": "Austin",
@@ -39,7 +41,8 @@
     "turns": 20,
     "length": 5.513,
     "latitude": 30.134600,
-    "longitude": -97.635848
+    "longitude": -97.635848,
+    "maplink": "www.google.com/maps/embed/v1/view?zoom=15&center=30.1385%2C-97.6353"
 }, {
     "id": "338295",
     "city": "Jerez de la Frontera",
@@ -53,7 +56,8 @@
     "turns": 13,
     "length": 4.423,
     "latitude": 36.709349,
-    "longitude": -6.033868
+    "longitude": -6.033868,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=16&center=36.7093%2C-6.0339"
 }, {
     "id": "338513",
     "city": "Le Mans",
@@ -67,7 +71,8 @@
     "turns": 11,
     "length": 4.185,
     "latitude": 47.956115,
-    "longitude": 0.207884
+    "longitude": 0.207884,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=14&center=47.9535%2C0.2131"
 }, {
     "id": "338731",
     "city": "Scarperia e San Piero",
@@ -81,7 +86,8 @@
     "turns": 11,
     "length": 5.793,
     "latitude": 45.621873,
-    "longitude": 9.284825
+    "longitude": 9.284825,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=14&center=43.9976%2C11.3715"
 }, {
     "id": "338949",
     "city": "Montmeló",
@@ -95,7 +101,8 @@
     "turns": 16,
     "length": 4.627,
     "latitude": 41.568302,
-    "longitude": 2.257160
+    "longitude": 2.257160,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=15&center=41.5682%2C2.2571"
 }, {
     "id": "339167",
     "city": "Assen",
@@ -109,7 +116,8 @@
     "turns": 18,
     "length": 4.545,
     "latitude": 52.958398,
-    "longitude": 6.522353
+    "longitude": 6.522353,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=13&center=52.9585%2C6.5242"
 }, {
     "id": "339385",
     "city": "Hohenstein-Ernstthal",
@@ -123,7 +131,8 @@
     "turns": 14,
     "length": 3.700,
     "latitude": 50.791781,
-    "longitude": 12.688303
+    "longitude": 12.688303,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=17&center=50.7892%2C12.6957"
 }, {
     "id": "339603",
     "city": "Brno",
@@ -137,7 +146,8 @@
     "turns": 14,
     "length": 5.403,
     "latitude": 49.203943,
-    "longitude": 16.445672
+    "longitude": 16.445672,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=17&center=49.2003%2C16.4473"
 }, {
     "id": "339821",
     "city": "Spielberg",
@@ -151,7 +161,8 @@
     "turns": 10,
     "length": 4.318,
     "latitude": 47.223501,
-    "longitude": 14.760706
+    "longitude": 14.760706,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=14&center=47.2239%2C14.7664"
 }, {
     "id": "340039",
     "city": "Silverstone",
@@ -165,7 +176,8 @@
     "turns": 20,
     "length": 5.891,
     "latitude": 52.073321,
-    "longitude": -1.014661
+    "longitude": -1.014661,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=14&center=52.0733%2C-1.0147"
 }, {
     "id": "340257",
     "city": "Misano",
@@ -179,7 +191,8 @@
     "turns": 16,
     "length": 4.226,
     "latitude": 43.961469,
-    "longitude": 12.685969
+    "longitude": 12.685969,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=17&center=43.9614%2C12.6860"
 }, {
     "id": "340475",
     "city": "Alcañiz",
@@ -193,7 +206,8 @@
     "turns": 16,
     "length": 5.078,
     "latitude": 41.078364,
-    "longitude": -0.204524
+    "longitude": -0.204524,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=17&center=41.0783%2C-0.2045"
 }, {
     "id": "340693",
     "city": "Buriram",
@@ -207,7 +221,8 @@
     "turns": 12,
     "length": 4.554,
     "latitude": 14.958065,
-    "longitude": 103.084925
+    "longitude": 103.084925,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=17&center=14.9580%2C103.0849"
 }, {
     "id": "340911",
     "city": "Motegi",
@@ -221,7 +236,8 @@
     "turns": 14,
     "length": 4.800,
     "latitude": 36.532029,
-    "longitude": 140.225423
+    "longitude": 140.225423,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=17&center=36.5320%2C140.2254"
 }, {
     "id": "341129",
     "city": "Phillip Island",
@@ -235,7 +251,8 @@
     "turns": 12,
     "length": 4.445,
     "latitude": -38.496913,
-    "longitude": 145.231605
+    "longitude": 145.231605,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=17&center=-38.4969%2C145.2316"
 }, {
     "id": "341347",
     "city": "Selangor",
@@ -249,7 +266,8 @@
     "turns": 15,
     "length": 5.543,
     "latitude": 2.759532,
-    "longitude": 101.731777
+    "longitude": 101.731777,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=14&center=2.7623%2C101.7385"
 }, {
     "id": "341565",
     "city": "Valenciana",
@@ -263,5 +281,6 @@
     "turns": 14,
     "length": 4.005,
     "latitude": 39.486944,
-    "longitude": -0.629870
+    "longitude": -0.629870,
+    "maplink": "https://www.google.com/maps/embed/v1/view?zoom=16&center=39.4869%2C-0.6299"
 }]

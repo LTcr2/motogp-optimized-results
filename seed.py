@@ -94,6 +94,7 @@ def load_venues(venues_json):
 		turns = venue['turns']
 		latitude = venue['latitude']
 		longitude = venue['longitude']
+		maplink = venue['maplink']
 		venue = Venue(venue_id=venue_id, 
 					  city=city, 
 					  name=name,
@@ -103,7 +104,8 @@ def load_venues(venues_json):
 					  length=length,
 					  turns=turns,
 					  longitude=longitude,
-					  latitude=latitude)
+					  latitude=latitude,
+					  maplink=maplink)
 		print(venue)
 
 		db.session.add(venue)
