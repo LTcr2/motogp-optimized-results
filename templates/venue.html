@@ -5,18 +5,18 @@
 {% block content %}
 
 
-	<h2>{{ venue.description }}</h2>
+	<h3>{{ venue.description }}</h3>
 	<div>{{ venue.name }}</div>
 	<div>City: {{ venue.city }}</div>
 	<div>Country: {{ venue.country_code }}
-	<div>Length: {{ venue.length }}</div>
+	<div>Length: {{ venue.length }} km</div>
 	<div>Turns: {{ venue.turns }}</div>
 	<div>Status: {{ venue.status }}</div>
 	<p>
 		<div>Map: </div>
 
-		<div id="map" >
-			<iframe width="600" height="450" frameborder="0" style="border:0" src= "https://www.google.com/maps/embed/v1/view?zoom=15&center=30.1385%2C-97.6353&key=AIzaSyBLAgXE42atlvCmAIJopHRVLe08v9MyAaM" allowfullscreen></iframe>
+		<div id="map">
+			<iframe width="600" height="450" frameborder="0" style="border:0" src= "https://www.google.com/maps/embed/v1/view?zoom=15&center={{venue.latitude}}5%2C{{venue.longitude}}&key=AIzaSyBLAgXE42atlvCmAIJopHRVLe08v9MyAaM" allowfullscreen></iframe>
 		</div>
 
 
@@ -24,7 +24,7 @@
 
 
 
-
+  
 
 
 

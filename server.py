@@ -143,7 +143,8 @@ def show_youtube():
     # hardcode_example = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=valentino%20rossi&key="+developer_key
 
 
-    formatted_keywords = select_competitor + select_venue
+    formatted_keywords = select_competitor+ " "+select_venue
+    print(formatted_keywords)
 
     url = "https://www.googleapis.com/youtube/v3/search"
 
@@ -189,13 +190,6 @@ def competitor_detail(competitor_id):
 	# team_id = Team.query.filter_by(competitor_id=competitor_id)
 	results = Result.query.filter_by(competitor_id=competitor_id)
 
-	"""
-	<div>Teammates:
-		{% for competitor in team.competitors %}
-			<a href="/competitors/{{ competitor.competitor_id }}">{{ competitor.name }}</a>
-		{% endfor %}
-	</div>
-	"""
 
 	#SELECT venue_id FROM results WHERE position != N/A
 
@@ -292,7 +286,7 @@ if __name__ == "__main__":
 	connect_to_db(app)
 
 	# DebugToolbarExtension(app)
-	app.run(host="0.0.0.0")
+	app.run(host="0.0.0.0", port=5001)
 
 
 

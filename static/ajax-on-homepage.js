@@ -21,7 +21,12 @@ function createYoutubeVideoWith(results) {
     // $('#youtube-results').html("<p>" + results + "</p>");
 
     //This SHOULD work when your daily limit is reset.
-    $('#youtube-results').html("<iframe src=" + youtubeUrl + "width=\"560\" height=\"315\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><iframe>");  
+    // $('#youtube-results').html("<iframe src=" + youtubeUrl + "width=\"560\" height=\"315\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><iframe>"); 
+    $('#youtube-results').html("<a href=\"https://www.youtube.com/embed/"+videoId+"\""+"target=\"test-video\">GET VIDEO RESULT") 
+
+    // <div>
+    //     <a href="https://www.youtube.com/embed/DWyE0HVMF4g" target="test-video">Marc Marquez, Grand Prix of Qatar 2018</a>
+    // </div>
 }
 
 
