@@ -1,0 +1,123 @@
+section {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(motogp_logo.png);
+	z-index: 1;
+}
+
+section:before {
+	content: '';
+	position: absolute;
+	top:0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	background: url(motogp_logo.png);
+	opacity: .5;
+	z-index: 1;
+}
+
+section:hover:before {
+	animation: animate .2s linear infinite;
+}
+@keyframes animate{
+	0%
+	{
+		background-position: 0 0;
+	}
+	10%
+	{
+		background-position: 5px 0;
+	}
+	20%
+	{
+		background-position: -5px 0;
+	}
+	30%
+	{
+		background-position: 15px 0;
+	}
+	40%
+	{
+		background-position: -25px 0;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+.this_is {
+	position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden
+}
+
+.title {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden
+}
+
+.image {
+	padding: 20px;
+	margin: 15px;
+	position: 50%;
+	height: 200px;
+	width: auto;
+	z-index: -999;
+}
+
+.image: before {
+ 	content: '';
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100px;
+ 	height: 100px;
+ 	background: url(motogp_logo.png);
+ 	opacity: .5;
+ 	background-position: 20px 0;
+ }
+
+.enter {
+	font: arial;
+	size: 100m;
+
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.color-overlay {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -1000;
+   overflow: hidden;
+   filter: blur;
+
+}
