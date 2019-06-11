@@ -4,6 +4,10 @@
 
 {% block content %}
 
+<head>
+	<title>{{ venue.name }} Stage Profile - 2018 MotoGP Optimized Results</title>
+</head>
+
 
 	<h3>{{ venue.description }}</h3>
 	<div>{{ venue.name }}</div>
@@ -12,12 +16,16 @@
 	<div>Length: {{ venue.length }} km</div>
 	<div>Turns: {{ venue.turns }}</div>
 	<div>Status: {{ venue.status }}</div>
+	<a href = "{{ venue.motogpfulllap }}">Official MotoGP Full Lap</a>
 	<p>
 		<div>Map: </div>
 
 		<div id="map">
 			<iframe width="600" height="450" frameborder="0" style="border:0" src= "https://www.google.com/maps/embed/v1/view?zoom=15&center={{venue.latitude}}5%2C{{venue.longitude}}&key=AIzaSyBLAgXE42atlvCmAIJopHRVLe08v9MyAaM" allowfullscreen></iframe>
 		</div>
+
+
+	<iframe width="560" height="315" src="{{venue.fulllap}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 	</p>

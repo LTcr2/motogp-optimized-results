@@ -37,9 +37,12 @@ https://api.sportradar.us/motogp/{access_level}/{version}/{language_code}/compet
 
 
 ######################## YOUTUBE API INITIALIZATION ####################
-
-
 @app.route("/")
+def titlepage():
+
+	return render_template("/title.html")
+
+@app.route("/homepage")
 def homepage():
 	"""Show homepage and all results"""
 
@@ -183,6 +186,8 @@ def competitor_list():
 def competitor_detail(competitor_id):
 	"""Show info about specific rider"""
 
+	# import pdb; pdb.set_trace()
+
 	#some sql alchemy here doing some querying
 	competitor = Competitor.query.get(competitor_id)
 
@@ -199,8 +204,13 @@ def competitor_detail(competitor_id):
 	venue_ids = []
 	for result in results:
 		venue_ids.append(result.venue_id)
+	#now venue_ids have a list of all the venues in which this competitor
 
-	#now venue_ids have a list of all the venues in which this competitor has results for
+
+	#this lists all the venue_ids and the position the rider finished at
+	venue_position_dict = {}
+	for result in results:
+		venue_position_dict[result.venue_id] = result.position
 
 
 	venues = []
@@ -209,7 +219,9 @@ def competitor_detail(competitor_id):
 		venues.append(venue_object)
 
 
-	return render_template('/competitor.html', 
+
+	return render_template('/competitor.html',
+							venue_position_dict=venue_position_dict, 
 							competitor=competitor, 
 							venues=venues,
 							results=results)

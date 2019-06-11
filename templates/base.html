@@ -4,23 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/static/ajax-exercise.css">
+  <link rel="stylesheet" href="/static/motogp.css">
 
 </head>
 
 <body>
     <nav class="navbar navbar-inverse">
-      <div class="container">
         <div class="navbar-header">
-          <a href="/">2018 MotoGP Optimized Results</a>
-          <a href="/competitors">Competitors</a>   
-          <a href="/teams">Teams</a>   
-          <a href="/venues">Stages</a>  
-          <a href="/about">About</a> 
+          <a class="nav-link" href="/">2018 MotoGP Optimized Results</a>
+          <a class="nav-link" href="/homepage">Home</a>
+          <a class="nav-link" href="/competitors">Competitors</a>
+          <a class="nav-link" href="/teams">Teams</a>   
+          <a class="nav-link" href="/venues">Stages</a>  
         </div>
       </div>
-
     </nav>
+
 
 
 
@@ -37,10 +36,14 @@
       {% endwith %}
 
       {% block content %} put yer content here {% endblock %}
+      <nav id="main_footer" class="footer_tab">
+        <a href="https://www.ltcr2.com">Leslie Tong 2019 </a>
+        <a href="/about">About</a> 
+      </nav>
 
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="/static/ajax-on-homepage.js"></script>
+  </body>
 
-</body>
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="/static/ajax-on-homepage.js"></script>
 
 </html>

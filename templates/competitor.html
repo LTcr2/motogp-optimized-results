@@ -4,6 +4,10 @@
 
 {% block content %}
 
+<head>
+	<title>{{ competitor.name }} Rider Profile - MotoGP Optimized Results</title>
+</head>
+
 
 	<h3>{{ competitor.name }}</h3>
 	<div>Country: {{ competitor.country_code }}</div>
@@ -12,21 +16,21 @@
 	<div>Team: 
 		<a href="/teams/{{ competitor.team.team_id }}">{{ competitor.team.name }}</a>
 	</div>
+	<div>Final Standing: {{ competitor.result.position }}</div>
+	<div>Races Attended: {{ competitor.result.races }}</div>
 
 
 
-
-
-	<div>Stages with results for this rider:
+	<div>Results:
 		<ul>
 			{% for venue in venues %}
 			<li>
-				<a href="/venues/{{venue.venue_id}}">{{ venue.description }}
+				<a href="/venues/{{venue.venue_id}}">{{ venue.description }}</a>- {{ venue_position_dict[venue.venue_id] }}
 			</li>
 			{% endfor %}
-		<ul>
-	<div>
-	
+		</ul>
+	</div>
+
 
 
   	</div>

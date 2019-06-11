@@ -37,6 +37,8 @@ class Competitor(db.Model):
 	team_id = db.Column(db.String(25), db.ForeignKey('teams.team_id'), nullable=True)
 	team = db.relationship('Team', backref='competitors')
 
+	result = db.Column(db.JSON, nullable=False)
+
 
 
 	"""
@@ -62,8 +64,8 @@ class Competitor(db.Model):
 	def __repr__(self):
 		""" Returns representation of class information"""
 
-		return "<Competitor id={} name={} gender={} nationality={} vehicle_number={} team={}".format(
-			self.competitor_id, self.name, self.gender, self.country_code, self.vehicle_number, self.team)
+		return "<Competitor id={} name={} gender={} nationality={} vehicle_number={} team={} result={}".format(
+			self.competitor_id, self.name, self.gender, self.country_code, self.vehicle_number, self.team, self.result)
 
 
 
@@ -161,6 +163,8 @@ class Venue(db.Model):
 	latitude = db.Column(db.Float, nullable=False)
 	longitude = db.Column(db.Float, nullable=False)
 	maplink = db.Column(db.String(200), nullable=False)
+	fulllap = db.Column(db.String(200), nullable=False)
+	motogpfulllap = db.Column(db.String(200), nullable=False)
 
 
 	def __repr__(self):

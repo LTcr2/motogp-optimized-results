@@ -40,6 +40,7 @@ def load_competitors(riders_json):
 								vehicle_number=bike_number, 
 								team=team,
 								gender=gender,
+								result=result,
 								country_code=country_code)
 		print(competitor)
 
@@ -95,6 +96,8 @@ def load_venues(venues_json):
 		latitude = venue['latitude']
 		longitude = venue['longitude']
 		maplink = venue['maplink']
+		fulllap = venue['fulllap']
+		motogpfulllap = venue['motogpfulllap']
 		venue = Venue(venue_id=venue_id, 
 					  city=city, 
 					  name=name,
@@ -105,7 +108,9 @@ def load_venues(venues_json):
 					  turns=turns,
 					  longitude=longitude,
 					  latitude=latitude,
-					  maplink=maplink)
+					  maplink=maplink,
+					  fulllap=fulllap,
+					  motogpfulllap=motogpfulllap)
 		print(venue)
 
 		db.session.add(venue)
