@@ -4,44 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/static/motogp.css">
+  <link rel="stylesheet" href="/static/style.css">
 
 </head>
-
-<body>
-    <nav class="navbar navbar-inverse">
-        <div class="navbar-header">
-          <a class="nav-link" href="/">2018 MotoGP Optimized Results</a>
-          <a class="nav-link" href="/homepage">Home</a>
-          <a class="nav-link" href="/competitors">Competitors</a>
-          <a class="nav-link" href="/teams">Teams</a>   
-          <a class="nav-link" href="/venues">Stages</a>  
-        </div>
-      </div>
-    </nav>
-
-
-
-
-
-      <!--  Flash messages display here -->
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          <ul class=flashes>
-          {% for message in messages %}
-            <li>{{ message }}</li>
-          {% endfor %}
-          </ul>
-        {% endif %}
-      {% endwith %}
-
-      {% block content %} put yer content here {% endblock %}
-      <nav id="main_footer" class="footer_tab">
-        <a href="https://www.ltcr2.com">Leslie Tong 2019 </a>
-        <a href="/about">About</a> 
+      <nav class="navbar-header">
+        <a class="nav-link" href="/">2018 MotoGP Optimized Results</a>
+        <a class="nav-link" href="/homepage">Home</a>
+        <a class="nav-link" href="/competitors">Competitors</a>
+        <a class="nav-link" href="/teams">Teams</a>   
+        <a class="nav-link" href="/venues">Stages</a>  
       </nav>
 
-  </body>
+
+      {% block content %} put yer content here 
+        <body>
+
+
+
+        </body>
+      {% endblock %}
+
+    <nav class="mainfooter">
+      <div class="navbar-header">
+        <a class="nav-link" href ="https://www.ltcr2.com">Leslie Tong 2019 </a>
+        <a class="nav-link" href="/about">About</a> 
+      </div>
+    </nav>
 
   <script src="http://code.jquery.com/jquery.js"></script>
   <script src="/static/ajax-on-homepage.js"></script>

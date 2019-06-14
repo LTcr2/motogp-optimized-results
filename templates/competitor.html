@@ -4,39 +4,36 @@
 
 {% block content %}
 
-<head>
-	<title>{{ competitor.name }} Rider Profile - MotoGP Optimized Results</title>
-</head>
+	<head>
+		<title>{{ competitor.name }} Rider Profile - MotoGP Optimized Results</title>
+	</head>
 
 
-	<h3>{{ competitor.name }}</h3>
-	<div>Country: {{ competitor.country_code }}</div>
-	<div>Gender: {{ competitor.gender }}</div>
-	<div>Bike: {{ competitor.bike }}</div>
-	<div>Team: 
-		<a href="/teams/{{ competitor.team.team_id }}">{{ competitor.team.name }}</a>
+    <div id="content">
+    	<div id="padding-from-nav">
+			<h3>{{ competitor.name }}</h3>
+			<div>Country: {{ competitor.country_code }}</div>
+			<div>Gender: {{ competitor.gender }}</div>
+			<div>Bike: {{ competitor.bike }}</div>
+			<div>Team: 
+				<a href="/teams/{{ competitor.team.team_id }}">{{ competitor.team.name }}</a>
+			</div>
+			<div>Final Standing: {{ competitor.result.position }}</div>
+			<div>Races Attended: {{ competitor.result.races }}</div>
+
+
+
+			<div>Results:
+				<ul>
+					{% for venue in venues %}
+					<li>
+						<a href="/venues/{{venue.venue_id}}">{{ venue.description }}</a>- {{ venue_position_dict[venue.venue_id] }}
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
 	</div>
-	<div>Final Standing: {{ competitor.result.position }}</div>
-	<div>Races Attended: {{ competitor.result.races }}</div>
-
-
-
-	<div>Results:
-		<ul>
-			{% for venue in venues %}
-			<li>
-				<a href="/venues/{{venue.venue_id}}">{{ venue.description }}</a>- {{ venue_position_dict[venue.venue_id] }}
-			</li>
-			{% endfor %}
-		</ul>
-	</div>
-
-
-
-  	</div>
-
-	</div>
-
 
 
 {% endblock %}

@@ -8,69 +8,68 @@
 	<title>2018 MotoGP Optimized Results</title>
 <head>
 
-<body>
+	<image id="homepage-image" src="/static/mm93finish.jpg"></image>
 
-	<h1>Results Search Form</h1>
+	<div id="content">
+		<h1>Search Results</h1>
 
-	<form id="results-form">
-	    <div class="form-group">
-	      <label>Competitor Name
-	        <select id="competitor_name_field" name="competitor_name" class="form-control">
-	        	{% for competitor in competitors %}
-	        		<li>
-	        			<option>{{ competitor.name }}</option>
-	        		</li>
-	        	{% endfor %}
-	        </select>
-	      </label>
+		<form id="results-form">
+		    <div class="form-group">
+		      <label>Competitor Name
+		        <select id="competitor_name_field" name="competitor_name" class="form-control">
+		        	{% for competitor in competitors %}
+		        		<li>
+		        			<option>{{ competitor.name }}</option>
+		        		</li>
+		        	{% endfor %}
+		        </select>
+		      </label>
 
-	      <label>Venue Name
-	    		<select id="venue_name_field" name="venue_description" class="form-control">
-	    			{% for venue in venues %}
-	    				<li>
-	    					<option>{{ venue.description }}</option>
-	    				</li>
-	    			{% endfor %}
-	    		</select>
-	    	</label>
+		      <label>Venue Name
+		    		<select id="venue_name_field" name="venue_description" class="form-control">
+		    			{% for venue in venues %}
+		    				<li>
+		    					<option>{{ venue.description }}</option>
+		    				</li>
+		    			{% endfor %}
+		    		</select>
+		    	</label>
+		    </div>
+
+			<div>
+		    	<label>Number of Results:
+		    		<select id="num_results_field" name="num_results" class="form-control">
+		    			<option> 1 </option>
+		    			<option> 2 </option>
+		    			<option> 3 </option>
+		    		</select>
+		    	</label>
+		    	<label>Sort by:
+	        		<select id="sort_by_field" name="sort_by" class="form-control"required>
+			            <option> Relevance </option>
+			            <option> Date </option>
+			            <option> Rating </option>
+			            <option> Title </option>
+	        		</select>
+	        	</label>
+	        </div>
+
+	        <div class="form-group">
+		      	<button id="order-form-button" class="btn btn-primary" >Search</button>
+		    </div>
+
+			<div id="rider-results"></div>
+
+			<button id="youtube-results"></button>
+
+		</form>
+
 
 		<div>
-	    	<label>Number of Results:
-	    		<select id="num_results_field" name="num_results" class="form-control">
-	    			<option> 1 </option>
-	    			<option> 2 </option>
-	    			<option> 3 </option>
-	    		</select>
-	    	</label>
-	    	<label>Sort by:
-        		<select id="sort_by_field" name="sort_by" class="form-control"required>
-		            <option> Relevance </option>
-		            <option> Date </option>
-		            <option> Rating </option>
-		            <option> Title </option>
-        		</select>
-        	</label>
-        </div>
+			<iframe name="test-video" src="" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
 
-        <div class="form-group">
-	      	<button id="order-form-button" class="btn btn-primary" >Search</button>
-	    </div>
-
-		<div id="rider-results"></div>
-
-		<div id="youtube-results"></div>
-
-	</form>
-
-
-	<div>
-		<iframe name="test-video" src="" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
 </div>
-
-</body>
-</html>
-
 
 
 {% endblock %}

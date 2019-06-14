@@ -8,16 +8,21 @@
 	<title> Teams - 2018 MotoGP Optimized Results </title>
 </head>
 
+<image id="homepage-image" src="/static/qatar2019.jpg"></image>
 
-	<h3>2018 Team Roster</h3>
+<div id="content">
+	<div id="padding-from-nav">
+		<h3> 2018 Team Roster</h3>
 
-	<ul>
-  		{% for team in teams %}
-    		<li>
-      		<a href="/teams/{{ team.team_id }}">{{ team.name }}</a>
-    		</li>
-  		{% endfor %}
-  	</ul>
+		<ul>
+	  		{% for team in teams %}
+	    		<li>
+	      		<a href="/teams/{{ team.team_id }}">{{ team.name }}</a>
+	    		</li>
+	  		{% endfor %}
+	  	</ul>
+	  </div>
+</div>
 
 
 

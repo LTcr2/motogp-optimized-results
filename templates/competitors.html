@@ -4,23 +4,24 @@
 
 {% block content %}
 
-<head>
-	<title> Competitors - 2018 MotoGP Optimized Results</title>
-</head>
+	<head>
+		<title> Competitors - 2018 MotoGP Optimized Results</title>
+	</head>
+
+	<image id="homepage-image" src="/static/2018competitors.jpg"></image>
 
 
+	<div id="content">
+		<h3>2018 Competitor Roster</h3>
 
-	<h3>2018 Competitor Roster</h3>
-
+		<ul>
+			{% for competitor in competitors %}
+			<li>
+				<a href="/competitors/{{ competitor.competitor_id }}">{{ competitor.name }}</a>
+			</li>
+			{% endfor %}
+		</ul>
 	</div>
-
-	<ul>
-		{% for competitor in competitors %}
-		<li>
-			<a href="/competitors/{{ competitor.competitor_id }}">{{ competitor.name }}</a>
-		</li>
-		{% endfor %}
-	</ul>
 
 
 {% endblock %}

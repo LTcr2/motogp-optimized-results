@@ -299,28 +299,3 @@ if __name__ == "__main__":
 
 	# DebugToolbarExtension(app)
 	app.run(host="0.0.0.0", port=5001)
-
-
-
-# <h2>Request Details about Specific Rider</h2>
-	
-# 	<form id="rider-form">
-# 		<div class="form-group">
-# 			<label>Rider Name
-# 				<select id="rider-name-field" name="rider_name" class="form-control">
-# 					<option>marquez</option>
-# 					<option>rossi</option>
-# 				</select>
-# 			</label>
-# 		</div>
-
-# 		<div class="form-group">
-# 			<button type="submit" id="rider-name-button" class="btn btn-primary">List Details</button>
-# 		</div>
-
-# 		<div id="venue-list"></div>
-
-
-
-# <script src="http://code.jquery.com/jquery.js"></script>
-# <script src="/static/ajax-exercise.js"></script>

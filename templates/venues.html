@@ -8,18 +8,20 @@
 	<title>Stages - 2018 MotoGP Optimized Results</title>
 </head>
 
+<image id=homepage-image src="/static/cota.jpg"></image>
 
-	<h3>2018 Stages</h3>
+<div id="content">
+  	<h3>2018 Stages</h3>
 
-	<ul>
-  		{% for venue in venues %}
-    		<li>
-      			<a href="/venues/{{ venue.venue_id }}">{{ venue.country_code}} - {{ venue.description }}
-      			</a>
-    		</li>
-  		{% endfor %}
-  </ul>
-
+  	<ul>
+    		{% for venue in venues %}
+      		<li>
+        			<a href="/venues/{{ venue.venue_id }}">{{ venue.country_code}} - {{ venue.description }}
+        			</a>
+      		</li>
+    		{% endfor %}
+    </ul>
+</div>
 
 
 {% endblock %}

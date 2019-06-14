@@ -4,27 +4,34 @@
 
 {% block content %}
 
-<head>
-	<title>{{ team.name }} Team Profile - 2018 MotoGP Optimized Results</title>
-</head>
+	<head>
+		<title>{{ team.name }} Team Profile - 2018 MotoGP Optimized Results</title>
+	</head>
 
 
-	<h3>{{ team.name }}</h3>
-	<p>
-		<div> Country: {{ team.country_code }}</div>
-		<div> Final standing position: {{ team.position }}</div>
-		<div> Podiums: {{ team.podiums }}</div>
-		<div> Points: {{ team.points }}</div>
-		<div> Victories: {{ team.victories }}</div>
-		<div> Riders: 
-			{% for competitor in team.competitors %}
-				<li>
-					<a href="/competitors/{{ competitor.competitor_id }}">{{ competitor.vehicle_number }} - {{ competitor.name }}</a>
-				</li>
-			{% endfor %}
+<div id="padding-from-nav">
+	<div id="content">
+		<h3>{{ team.name }}</h3>
+			<p>
+				<div> Country: {{ team.country_code }}</div>
+				<div> Final standing position: {{ team.position }}</div>
+				<div> Podiums: {{ team.podiums }}</div>
+				<div> Points: {{ team.points }}</div>
+				<div> Victories: {{ team.victories }}</div>
+				<div> Riders: 
+					{% for competitor in team.competitors %}
+						<li>
+							<a href="/competitors/{{ competitor.competitor_id }}">{{ competitor.vehicle_number }} - {{ competitor.name }}</a>
+						</li>
+					{% endfor %}
+				</div>
+
+				<img width="600" src="/static/img/{{team.team_id}}.jpg">
+			</p>
 		</div>
+	</div>
+</div>
 
-	<img width="600" src="/static/img/{{team.team_id}}.jpg">
 
 
 {% endblock %}
