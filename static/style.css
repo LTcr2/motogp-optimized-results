@@ -102,7 +102,7 @@ h3 {
 .image {
 	padding-top: 90%;
 	height: 200px;
-	width: 100vh;
+	width: auto;
 	z-index: -999;
 }
 
