@@ -9,6 +9,16 @@ body {
 	padding-bottom: 7%;
 }
 
+span.b {
+	display: inline-block;
+	padding: 5px;
+}
+
+#meimg {
+	width: 90%;
+	height: auto;
+}
+
 .navbar-header {
 	padding-top: 12px;
 	background-color: red;
@@ -19,6 +29,14 @@ body {
 
 #padding-from-nav {
 	padding-top: 5%;
+}
+
+#padding-from-nav2 {
+	padding-top: 2%;
+}
+
+#padding-from-right {
+	padding-right: 40%;
 }
 
 #content {
