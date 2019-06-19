@@ -1,6 +1,6 @@
-![Title](/github_readme/title.jpg)
+![Title](/github_readme/title.jpg) 
 
-<h2> MotoGP Optimized Results</h2>
+<h2> MotoGP Optimized Results :motorcycle:</h2>
 
 MotoGP Optimized Results is a webapp that serves the results of the motorcycle Grand Prix World Championship of 2018. It uses data scraped from Wikipedia with light aid of the SportRadar MotoGP API. The traditional way of serving racing results are done through PDFs. This delivery isn't comprehensive and interactive. It doesn't give a contextualized understanding of what happened during a race. MotoGP Optimized Results allow racers and fans that ride an in depth view of the race tracks made available by using interactive Google Maps and videos of on-board laps made available by the Youtube API.
 
